@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My styles */
+
+.wrapper {
+	width: 1000px;
+	margin: 10px  auto;
+}
+
+.tablet__img {
+	max-width: 450px;
+	position: relative;
+	z-index: 1;
+}
+
+.tablet__wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.img__wrapper {
+	width: 398px;
+    height: 530px;
+    position: absolute;
+    left: 26px;
+    top: 68px;
+    z-index: 10;
+    overflow: scroll;
+}
+
+.page__img {
+	width: 398px;
+    position: absolute;
+    left: 0;
+    top: -42px;
+}
+
+.banner1__img {
+	width: 398px;
+	position: absolute;
+	left: 0;
+    top: 0;
+}
+
+button {
+	width: 398px;
+	position: absolute;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.banner__btn {
+	height: 147px;
+}
+
+.banner2__img {
+	width: 398px;
+	position: absolute;
+	left: 500px;
+	top: 68px;
+	opacity: 0;
+	z-index: 20;
+}
+
+.banner2__img.anime {
+	animation: banner__anim linear 3s forwards;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+  }
+  
+  @keyframes banner__anim {
+	0% {
+	  opacity:0;
+	  transform:  translate(0px,0px)  ;
+	}
+	34% {
+	  opacity:1;
+	  transform:  translate(0px,0px)  ;
+	}
+	67% {
+	  transform:  translate(-474px,0px)  ;
+	}
+	100% {
+	  opacity:1;
+	  transform:  translate(-474px,0px)  ;
+	}
+  }
+
+.student-video__btn {
+	height: 178px;
+	top: 147px;
+	z-index: 20;
+}
+
+.student-video__img {
+	width: 398px;
+	position: absolute;
+	top: 147px;
+	opacity: 0;
+}
+
+.student-video__img.anime {
+	animation: student-video__anim linear .5s forwards;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+  }
+  
+  @keyframes student-video__anim{
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+
+.how-to__btn {
+	height: 192px;
+    top: 338px;
+	z-index: 20;
+}
+
+.how-to__img {
+	width: 398px;
+	position: absolute;
+	top: 530px;
+}
+
+.how-to__img.anime {
+	animation: how-to__anim linear 1s forwards;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	}
+	
+  @keyframes how-to__anim{
+	0% {
+	  transform:  translate(0px,0px)  ;
+	}
+	100% {
+	  transform:  translate(0px,-190px)  ;
+	}
+  }
+  

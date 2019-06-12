@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="891px" height="567px" viewBox="0 0 891 567" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-2" stroke="#979797" fill-rule="nonzero" x="1.5" y="233.5" width="889" height="68" rx="6"></rect>
+        <circle id="Oval" fill="#333E48" fill-rule="nonzero" cx="446.588281" cy="12.5882814" r="6.58828143"></circle>
+        <path d="M446.208333,19.5 L446.208333,218.5" id="Line-2" stroke="#979797" stroke-linecap="square" stroke-dasharray="3"></path>
+        <path d="M689.5,137.5 L446.208333,218.5" id="Line-2" stroke="#979797" stroke-linecap="square" stroke-dasharray="3"></path>
+        <path d="M309.5,46.5 L446.208333,218.5" id="Line-2" stroke="#979797" stroke-linecap="square" stroke-dasharray="3"></path>
+        <path d="M202.5,138.5 L446.208333,218.5" id="Line-2" stroke="#979797" stroke-linecap="square" stroke-dasharray="3"></path>
+        <path d="M582.5,45.5 L446.208333,218.5" id="Line-2" stroke="#979797" stroke-linecap="square" stroke-dasharray="3"></path>
+        <circle id="Oval" fill="#333E48" fill-rule="nonzero" cx="202.588281" cy="137.588281" r="6.58828143"></circle>
+        <circle id="Oval" fill="#333E48" fill-rule="nonzero" cx="689.588281" cy="136.588281" r="6.58828143"></circle>
+        <circle id="Oval" fill="#333E48" fill-rule="nonzero" cx="582.588281" cy="45.5882814" r="6.58828143"></circle>
+        <circle id="Oval" fill="#333E48" fill-rule="nonzero" cx="446.588281" cy="221.588281" r="6.58828143"></circle>
+        <circle id="Oval" fill="#333E48" fill-rule="nonzero" cx="308.588281" cy="45.5882814" r="6.58828143"></circle>
+    </g>
+</svg>

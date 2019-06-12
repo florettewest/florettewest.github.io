@@ -1,0 +1,486 @@
+.anime-container,
+.content {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0
+}
+
+a,
+abbr,
+acronym,
+address,
+article,
+aside,
+blockquote,
+body,
+caption,
+code,
+dd,
+del,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+iframe,
+img,
+label,
+legend,
+li,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+section,
+span,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1.5;
+  background: #fff;
+  height: 100vh
+}
+
+.dot,
+.square {
+  background: red
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0
+}
+
+caption,
+td,
+th {
+  text-align: left;
+  font-weight: 400;
+  float: none !important
+}
+
+table,
+td,
+th {
+  vertical-align: middle
+}
+
+blockquote after,
+blockquote before,
+q after,
+q before {
+  content: ''
+}
+
+a img {
+  border: none
+}
+
+b,
+i {
+  display: none
+}
+
+.image {
+  width: 500px
+}
+
+.content {
+  max-width: 1000px;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+.anime-container {
+  width: 845px;
+  height: 556px;
+}
+
+.anime__el,
+.square {
+  position: absolute
+}
+
+#anime1-1 {
+  top: 155px;
+  left: 187px;
+}
+
+#anime1-2 {
+  top: 320px;
+  left: 419px;
+}
+
+#anime1-3 {
+  top: 481px;
+  left: 580px;
+}
+
+#anime1-4 {
+  top: 481px;
+  left: 260px;
+}
+
+#anime1-5 {
+  top: 235px;
+  left: 418px;
+}
+
+#anime2-1 {
+  top: 68px;
+  left: 287px;
+}
+
+#anime2-2 {
+  top: 320px;
+  left: 419px;
+}
+
+#anime2-3 {
+  top: 481px;
+  left: 580px;
+}
+
+#anime2-4 {
+  top: 481px;
+  left: 260px;
+}
+
+#anime2-5 {
+  top: 235px;
+  left: 418px;
+}
+
+#anime3-1 {
+  top: 36px;
+  left: 418px;
+}
+
+#anime3-2 {
+  top: 320px;
+  left: 419px;
+}
+
+#anime3-3 {
+  top: 481px;
+  left: 580px;
+}
+
+#anime3-4 {
+  top: 481px;
+  left: 260px;
+}
+
+#anime3-5 {
+  top: 235px;
+  left: 418px;
+}
+
+#anime4-1 {
+  top: 68px;
+  left: 547px;
+}
+
+#anime4-2 {
+  top: 320px;
+  left: 419px;
+}
+
+#anime4-3 {
+  top: 481px;
+  left: 580px;
+}
+
+#anime4-4 {
+  top: 481px;
+  left: 260px;
+}
+
+#anime4-5 {
+  top: 235px;
+  left: 418px;
+}
+
+#anime5-1 {
+  top: 155px;
+  left: 649px;
+}
+
+#anime5-2 {
+  top: 320px;
+  left: 419px;
+}
+
+#anime5-3 {
+  top: 481px;
+  left: 580px;
+}
+
+#anime5-4 {
+  top: 481px;
+  left: 260px;
+}
+
+#anime5-5 {
+  top: 235px;
+  left: 418px;
+}
+
+#anime2 {
+  top: 151px;
+  left: 130px;
+}
+
+#anime3 {
+  top: 293px;
+  left: 130px;
+}
+
+#anime4 {
+  top: 431px;
+  left: 247px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.square {
+  width: 14px;
+  height: 14px;
+  top: -7px;
+  left: -7px
+}
+
+#motionPath {
+  width: 256px;
+  height: 112px;
+  position: relative;
+  margin: 0 auto
+}
+
+/* Wrap the SVG in a div */
+.cog-wheels {
+  position: absolute;
+  top: 244px;
+  left: 497px;
+  width: 80px;
+  height: 80px;
+  display: none;
+}
+
+.body-cem .cog-wheels {
+  left: 444px;
+}
+
+/*Rotate cogs*/
+
+svg .cog-blue {
+  transform-origin: 306.785px 190.5px;
+  animation: spin 10s linear infinite;
+  animation-delay: 0.8s;
+}
+
+svg .cog-red {
+  transform-origin: 207.352px 357.835px;
+  animation: spin-reverse 10s linear infinite;
+  animation-delay: 0.8s;
+}
+
+svg .cog-yellow {
+  transform-origin: 393.785px 409.5px;
+  animation: spin 10s linear infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  100% {
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+.tech__image {
+  position: absolute;
+  top: 30px;
+  left: 0
+}
+
+.tech__image1.show {
+  display: none!important;
+}
+
+.tech__image2.show {
+  display: block!important;
+}
+
+.diagram-text {
+  position: absolute;
+  font-size: 24px;
+  color: #333E48;
+}
+
+.diagram-text .small {
+  font-size: 13px;
+}
+
+.text__1 {
+  top: 145px;
+  left: 124px;
+}
+
+/* .text__1.anime {
+  
+  .text__1{
+    animation: animationText linear 17s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes animationText{
+    0% {
+      opacity:0;
+    }
+    2% {
+      opacity:1;
+    }
+    99% {
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+ 
+} */
+
+.text__2 {
+  top: 58px;
+  left: 111px;
+}
+
+.text__3 {
+  top: 6px;
+  left: 373px;
+}
+
+.text__4 {
+  top: 57px;
+  left: 564px;
+}
+
+.text__5 {
+  top: 145px;
+  left: 668px;
+}
+
+.text__6 {
+  top: 258px;
+  left: 0;
+  right: 0;
+}
+
+.text__6-2  {
+  top: 273px;
+  left: 0;
+  right: 0;
+}
+
+.text__6-2 {
+  display: none;
+}
+
+.text__7 {
+  top: 465px;
+  left: 611px;
+  z-index: 1;
+}
+
+
+.text__8 {
+  top: 474px;
+  left: 154px;
+  z-index: 1;
+}
+
+.text__8-2 {
+  top: 465px;
+  left: 118px;
+  z-index: 1;
+}
+
+.text__8-2 {
+  display: none;
+}
+
+.hide {
+  display: none!important;
+}
+
+.show {
+  display: block!important;
+}
