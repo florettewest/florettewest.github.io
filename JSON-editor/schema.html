@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- when using the mode "code", it's important to specify charset utf-8 -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+        <link
+            href="jsoneditor/dist/jsoneditor.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="jsoneditor/dist/jsoneditor.js"></script>
+    </head>
+    <body class="template js-body schema-body">
+        <div class="template-wrapper">
+            <!-- Header -->
+            <header class="header header-basic header-fixed js-header">
+                <div class="header-inner">
+                    <h1>Schema Designer</h1>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <main class="main">
+                <div class="sidenav">
+                    <p>
+                        <button
+                            type="button"
+                            class="btn btn-hero btn-soft btn-block"
+                            id="btn-template-selection"
+                        >
+                            <span class="btn-text">Template selection</span>
+                            <span
+                                class="btn-icon icon icon-arrow-right"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+
+                    <p>
+                        <button
+                            type="button"
+                            class="btn btn-hero btn-soft btn-block"
+                            id="btn-template-settings"
+                        >
+                            <span class="btn-text">Template settings</span>
+                            <span
+                                class="btn-icon icon icon-settings"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+
+                    <p>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="btn-text">
+                                Save template
+                            </span>
+                            <span
+                                class="btn-icon icon icon-tick"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+                </div>
+                <div class="container-fluid template-editor">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Credit Card Template</h2>
+                            <div id="jsoneditor"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid template-list">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Template list</h2>
+                            <ul class="list-group">
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Credit Card Template</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            id="btn-cc-template-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-delete"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Bank Account Template</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-delete"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid template-settings">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Credit Card Template: settings</h2>
+                            <div class="form-group">
+                                <label for="" class="input-label">
+                                    Template name
+                                </label>
+                                <div class="input-group">
+                                    <input
+                                        type="text"
+                                        class="input-field"
+                                        value="Credit Card"
+                                    />
+                                    <span class="input-group-control">
+                                        <button
+                                            type="button"
+                                            class="btn btn-hero"
+                                        >
+                                            Rename
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="danger-zone">
+                                <label for="" class="input-label">
+                                    Danger zone
+                                </label>
+                                <ul class="list-group">
+                                    <li>
+                                        <span class="list-group-item">
+                                            <span class="list-group-text"
+                                                >Delete Template</span
+                                            >
+
+                                            <span class="list-group-element">
+                                                <span class="btn-group">
+                                                    <label
+                                                        class="btn-group-item"
+                                                    >
+                                                        <input
+                                                            class="btn-group-input"
+                                                            type="radio"
+                                                            name="options1"
+                                                        />
+                                                        <span
+                                                            class="btn-group-text btn btn-hero btn-sm"
+                                                            >Delete</span
+                                                        >
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+
+                                    <li>
+                                        <span class="list-group-item">
+                                            <span class="list-group-text"
+                                                >Publish Template</span
+                                            >
+
+                                            <span class="list-group-element">
+                                                <span class="btn-group">
+                                                    <label
+                                                        class="btn-group-item"
+                                                    >
+                                                        <input
+                                                            class="btn-group-input"
+                                                            type="radio"
+                                                            name="options1"
+                                                        />
+                                                        <span
+                                                            class="btn-group-text btn btn-hero btn-sm"
+                                                            >Publish</span
+                                                        >
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer footer-basic">
+                <div class="footer-inner">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="footer-text"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="{URL}" class="footer-logo">
+                                <span class="sr-only">Go to home</span>
+                                <span
+                                    class="logo logo-multibrand-small-right"
+                                    aria-hidden="true"
+                                    [data-grunticon-embed]
+                                ></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="modal-productID modal- close">
+            <div class="modal-box">
+                <div class="modal-sidebar">
+                    <div class="form-group">
+                        <select class="input-field input-width-10" value="">
+                            <option value="">Append</option>
+                            <option value="field">Field</option>
+                            <option value="array">Array</option>
+                            <option value="object">Object</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="input-field input-width-10" value="">
+                            <option value="">Insert</option>
+                            <option value="field">Field</option>
+                            <option value="array">Array</option>
+                            <option value="object">Object</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button
+                            type="button"
+                            class="btn btn-neutral btn-soft btn-block"
+                        >
+                            <span class="btn-text">Duplicate</span>
+                            <span
+                                class="btn-icon icon icon-generic-file
+                                    "
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <button
+                            type="button"
+                            class="btn btn-primary btn-soft btn-block"
+                        >
+                            <span class="btn-text">Delete</span>
+                            <span
+                                class="btn-icon icon icon-delete
+                                        "
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-main">
+                    <div class="form-section">
+                        <h2>Field productId</h2>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="input-field"
+                                value="productId"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <select id="type" name="type" class="input-field">
+                                <option value="{DEFAULT_VALUE}"
+                                    >Please select</option
+                                >
+                                <option value="String" [selected]
+                                    >String</option
+                                >
+                                <option value="ASCIIString">ASCIIString</option>
+                                <option value="Boolean">Boolean</option>
+                                <optgroup label="Enum">
+                                    <option value="productCategory"
+                                        >productCategory</option
+                                    >
+                                    <option value="featureType"
+                                        >featureType</option
+                                    >
+                                    <option value="constraintType"
+                                        >constraintType</option
+                                    >
+                                    <option value="eligibilityType"
+                                        >eligibilityType</option
+                                    >
+                                    <option value="feeType">feeType</option>
+                                    <option value="discountType"
+                                        >discountType</option
+                                    >
+                                    <option value="discountEligibilityType"
+                                        >discountEligibilityType</option
+                                    >
+                                    <option value="unitOfMeasure"
+                                        >unitOfMeasure</option
+                                    >
+                                    <option value="rateApplicationMethod"
+                                        >rateApplicationMethod</option
+                                    >
+                                </optgroup>
+                                <option value="Number">Number</option>
+                                <option value="DateTimeString"
+                                    >DateTimeString</option
+                                >
+                                <option value="URIString">URIString</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="switch">
+                                <input
+                                    type="checkbox"
+                                    name="mandatory"
+                                    id="mandatory"
+                                    class="switch-input"
+                                />
+                                <span class="switch-text">Mandatory?</span>
+                                <span class="switch-toggle">
+                                    <span class="switch-toggle-off">No</span>
+                                    <span class="switch-toggle-on">Yes</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="tooltip">Tooltip</label>
+                            <textarea
+                                id="tooltip"
+                                name="tooltip"
+                                class="input-field "
+                            ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button
+                                type="button"
+                                class="btn btn-hero"
+                                id="btn-save__productId"
+                            >
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-link modal-close">
+                    <span
+                        class="btn-icon icon icon-close"
+                        data-grunticon-embed
+                    ></span>
+                </button>
+            </div>
+        </div>
+        <div class="modal-AdditionalInformation modal- close">
+            <div class="modal-box">
+                <div class="modal-sidebar">
+                    <div class="form-group">
+                        <select class="input-field input-width-10" value="">
+                            <option value="">Append</option>
+                            <option value="field">Field</option>
+                            <option value="array">Array</option>
+                            <option value="object">Object</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="input-field input-width-10" value="">
+                            <option value="">Insert</option>
+                            <option value="field">Field</option>
+                            <option value="array">Array</option>
+                            <option value="object">Object</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button
+                            type="button"
+                            class="btn btn-neutral btn-soft btn-block"
+                        >
+                            <span class="btn-text">Duplicate</span>
+                            <span
+                                class="btn-icon icon icon-generic-file
+                                        "
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <button
+                            type="button"
+                            class="btn btn-primary btn-soft btn-block"
+                        >
+                            <span class="btn-text">Delete</span>
+                            <span
+                                class="btn-icon icon icon-delete
+                                            "
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-main">
+                    <div class="form-section">
+                        <h2>Field AdditionalInformation</h2>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="input-field"
+                                value="AdditionalInformation"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-hero">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-link modal-close">
+                    <span
+                        class="btn-icon icon icon-close"
+                        data-grunticon-embed
+                    ></span>
+                </button>
+            </div>
+        </div>
+
+        <script src="js/gui.min.js"></script>
+        <script>
+            // create the editor
+            var container = document.getElementById('jsoneditor');
+            var options = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree']
+            };
+            var editor = new JSONEditor(container, options);
+
+            // set json
+            var json = {
+                productId: 'Altitude Platinum Black',
+                effectiveFrom: '2018-11-28T00:00:00Z',
+                effectiveTo: '2019-04-02T00:00:00Z',
+                lastUpdated: '2019-04-04T01:26:51.854523Z',
+                productCategory: 'CRED_AND_CHRG_CARDS',
+                name: 'Altitude Black Card',
+                description:
+                    'Westpac\u2019s most rewarding card offering you a choice of two great rewards programs \u2013 Altitude Rewards and Altitude Qantas with our highest points earn rate, premium travel and lifestyle services.',
+                brand: 'Westpac',
+                brandName: 'Westpac',
+                applicationUri:
+                    'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                isTailored: false,
+                AdditionalInformation: {
+                    overviewUri:
+                        'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                    termsUri:
+                        'https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/pb/Consumer_Conditions_of_use.pdf',
+                    eligibilityUri:
+                        'https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/new-customer-checklist/Checklist_IndividualCustomers.pdf',
+                    feesAndPricingUri:
+                        'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                    bundleUri: ''
+                },
+                features: [
+                    {
+                        featureType: 'INTEREST_FREE',
+                        additionalValue: 'P45D',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    }
+                ],
+                constraints: [
+                    {
+                        constraintType: 'MIN_LIMIT',
+                        additionalValue: 15000
+                    }
+                ],
+                eligibility: [
+                    {
+                        eligibilityType: 'MIN_AGE',
+                        additionalValue: 18,
+                        additionalInfo: '18 years old',
+                        additionalInfoURI:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/'
+                    }
+                ],
+                fees: [
+                    {
+                        name: 'Annual Card Fee',
+                        feeType: 'PERIODIC',
+                        amount: 250,
+                        transactionRate: '',
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue: 'P1Y',
+                        additionalInfo:
+                            '$250 plus a separate $50 Qantas Rewards Fee charged annually applicable only when the Altitude Qantas rewards program is selected',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    }
+                ]
+            };
+            editor.setName('Credit Card');
+            editor.set(json);
+            editor.expandAll();
+        </script>
+        <script>
+            // Reset field value
+            const fieldValue = document.querySelectorAll(
+                '.schema-body .jsoneditor-value:not(.jsoneditor-array)'
+            );
+            [...fieldValue].forEach(value => (value.innerHTML = 'Value'));
+
+            // Examples of interactions
+            const buttonClose = document.querySelectorAll('.modal-close');
+
+            // productId
+            const buttonProductId = document.querySelector(
+                '[data-field="productId"] .jsoneditor-button.jsoneditor-contextmenu'
+            );
+            const modalProductId = document.querySelector('.modal-productID');
+            buttonProductId.addEventListener('click', () => {
+                document.querySelector('body').classList.add('modal-open');
+
+                modalProductId.classList.remove('close');
+                modalProductId.classList.add('open');
+            });
+
+            // AdditionalInformation
+            const buttonAdditionalInformation = document.querySelector(
+                '[data-field="AdditionalInformation"] .jsoneditor-button.jsoneditor-contextmenu'
+            );
+            const modalAdditionalInformation = document.querySelector(
+                '.modal-AdditionalInformation'
+            );
+            buttonAdditionalInformation.addEventListener('click', () => {
+                document.querySelector('body').classList.add('modal-open');
+
+                modalAdditionalInformation.classList.remove('close');
+                modalAdditionalInformation.classList.add('open');
+            });
+
+            // close modal
+            [...buttonClose].forEach(button =>
+                button.addEventListener('click', () => {
+                    document
+                        .querySelector('body')
+                        .classList.remove('modal-open');
+                    modalProductId.classList.remove('open');
+                    modalProductId.classList.add('close');
+                    modalAdditionalInformation.classList.remove('open');
+                    modalAdditionalInformation.classList.add('close');
+                })
+            );
+
+            // Save updated field
+            const saveBtn = document.getElementById('btn-save__productId');
+
+            saveBtn.addEventListener('click', () => {
+                const field = document.querySelector(
+                    'tr[data-field="productId"]'
+                );
+                field.classList.add('updated');
+
+                const fieldValue = document.querySelector(
+                    'tr[data-field="productId"] .jsoneditor-value'
+                );
+                fieldValue.innerHTML = 'String ';
+
+                const fieldName = document.querySelector(
+                    'tr[data-field="productId"] .jsoneditor-field'
+                );
+                const mandatory = ' *';
+                fieldName.innerHTML = fieldName.innerHTML + mandatory;
+
+                let span = document.createElement('span');
+                span.setAttribute('class', 'icon icon-info icon-xsmall');
+                fieldValue.appendChild(span);
+
+                document.querySelector('body').classList.remove('modal-open');
+                modalProductId.classList.remove('open');
+                modalProductId.classList.add('close');
+                modalAdditionalInformation.classList.remove('open');
+                modalAdditionalInformation.classList.add('close');
+            });
+
+            // Actions from sidebar
+            const btnTemplateSelection = document.getElementById(
+                'btn-template-selection'
+            );
+            const divTemplateSelection = document.querySelector(
+                '.template-list'
+            );
+            const btnTemplateSettings = document.getElementById(
+                'btn-template-settings'
+            );
+            const divTemplateSettings = document.querySelector(
+                '.template-settings'
+            );
+            const divTemplateEditor = document.querySelector(
+                '.template-editor'
+            );
+            const btnTemplateEditor = document.getElementById(
+                'btn-cc-template-edit'
+            );
+
+            btnTemplateSelection.addEventListener('click', () => {
+                divTemplateEditor.style.display = 'none';
+                divTemplateSettings.style.display = 'none';
+                divTemplateSelection.style.display = 'block';
+            });
+            btnTemplateSettings.addEventListener('click', () => {
+                divTemplateEditor.style.display = 'none';
+                divTemplateSelection.style.display = 'none';
+                divTemplateSettings.style.display = 'block';
+            });
+            btnTemplateEditor.addEventListener('click', () => {
+                divTemplateSelection.style.display = 'none';
+                divTemplateSettings.style.display = 'none';
+                divTemplateEditor.style.display = 'block';
+            });
+        </script>
+    </body>
+</html>

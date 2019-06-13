@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- when using the mode "code", it's important to specify charset utf-8 -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+        <link
+            href="jsoneditor/dist/jsoneditor.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="jsoneditor/dist/jsoneditor.js"></script>
+    </head>
+    <body class="template js-body content-body content-final-body">
+        <div class="template-wrapper">
+            <!-- Header -->
+            <header class="header header-basic header-fixed js-header">
+                <div class="header-inner">
+                    <h1>Content Editor</h1>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <main class="main">
+                <div class="sidenav">
+                    <p>
+                        <button
+                            type="button"
+                            class="btn btn-hero btn-soft btn-block"
+                            id="btn-template-selection"
+                        >
+                            <span class="btn-text">Product selection</span>
+                            <span
+                                class="btn-icon icon icon-arrow-right"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+
+                    <p>
+                        <button
+                            type="button"
+                            class="btn btn-hero btn-soft btn-block"
+                            id="btn-template-settings"
+                        >
+                            <span class="btn-text">Product settings</span>
+                            <span
+                                class="btn-icon icon icon-settings"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+
+                    <p>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="btn-text">
+                                Save Product
+                            </span>
+                            <span
+                                class="btn-icon icon icon-tick"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+                </div>
+                <div class="container-fluid template-editor">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Credit Card: Altitude Platinum Black</h2>
+                            <div id="jsoneditor"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid template-list">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Product list</h2>
+                            <ul class="list-group">
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Platinum Black</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            id="btn-cc-template-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Business Gold</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Business Platinum</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Platinum</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid template-settings">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Altitude Platinum Black Product: settings</h2>
+                            <div class="form-group">
+                                <label for="" class="input-label">
+                                    Product name
+                                </label>
+                                <div class="input-group">
+                                    <input
+                                        type="text"
+                                        class="input-field"
+                                        value="Altitude Platinum Black"
+                                    />
+                                    <span class="input-group-control">
+                                        <button
+                                            type="button"
+                                            class="btn btn-hero"
+                                        >
+                                            Rename
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="danger-zone">
+                                <label for="" class="input-label">
+                                    Danger zone
+                                </label>
+                                <ul class="list-group">
+                                    <li>
+                                        <span class="list-group-item">
+                                            <span class="list-group-text"
+                                                >Archive Product</span
+                                            >
+
+                                            <span class="list-group-element">
+                                                <span class="btn-group">
+                                                    <label
+                                                        class="btn-group-item"
+                                                    >
+                                                        <input
+                                                            class="btn-group-input"
+                                                            type="radio"
+                                                            name="options1"
+                                                        />
+                                                        <span
+                                                            class="btn-group-text btn btn-hero btn-sm"
+                                                            >Archive</span
+                                                        >
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="list-group-item">
+                                            <span class="list-group-text"
+                                                >Delete Product</span
+                                            >
+
+                                            <span class="list-group-element">
+                                                <span class="btn-group">
+                                                    <label
+                                                        class="btn-group-item"
+                                                    >
+                                                        <input
+                                                            class="btn-group-input"
+                                                            type="radio"
+                                                            name="options1"
+                                                        />
+                                                        <span
+                                                            class="btn-group-text btn btn-hero btn-sm"
+                                                            >Delete</span
+                                                        >
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+
+                                    <li>
+                                        <span class="list-group-item">
+                                            <span class="list-group-text"
+                                                >Publish Product</span
+                                            >
+
+                                            <span class="list-group-element">
+                                                <span class="btn-group">
+                                                    <label
+                                                        class="btn-group-item"
+                                                    >
+                                                        <input
+                                                            class="btn-group-input"
+                                                            type="radio"
+                                                            name="options1"
+                                                        />
+                                                        <span
+                                                            class="btn-group-text btn btn-hero btn-sm"
+                                                            >Publish</span
+                                                        >
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer footer-basic">
+                <div class="footer-inner">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="footer-text"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="{URL}" class="footer-logo">
+                                <span class="sr-only">Go to home</span>
+                                <span
+                                    class="logo logo-multibrand-small-right"
+                                    aria-hidden="true"
+                                    [data-grunticon-embed]
+                                ></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/gui.min.js"></script>
+        <script>
+            // create the editor
+            var container = document.getElementById('jsoneditor');
+            var options = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree']
+            };
+            var editor = new JSONEditor(container, options);
+
+            // set json
+            var json = {
+                productId: 'Altitude Platinum Black',
+                effectiveFrom: '2018-11-28T00:00:00Z',
+                effectiveTo: '2019-04-02T00:00:00Z',
+                lastUpdated: '2019-04-04T01:26:51.854523Z',
+                productCategory: 'CRED_AND_CHRG_CARDS',
+                name: 'Altitude Black Card',
+                description:
+                    'Westpac\u2019s most rewarding card offering you a choice of two great rewards programs \u2013 Altitude Rewards and Altitude Qantas with our highest points earn rate, premium travel and lifestyle services.',
+                brand: 'Westpac',
+                brandName: 'Westpac',
+                applicationUri:
+                    'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                isTailored: false,
+                AdditionalInformation: {
+                    overviewUri:
+                        'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                    termsUri:
+                        'https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/pb/Consumer_Conditions_of_use.pdf',
+                    eligibilityUri:
+                        'https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/new-customer-checklist/Checklist_IndividualCustomers.pdf',
+                    feesAndPricingUri:
+                        'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                    bundleUri: ''
+                },
+                features: [
+                    {
+                        featureType: 'INTEREST_FREE',
+                        additionalValue: 'P45D',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'DIGITAL_BANKING',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'NOTIFICATIONS',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'LOYALTY_PROGRAM',
+                        additionalValue: 'Altitude Rewards',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'LOYALTY_PROGRAM',
+                        additionalValue: 'Altitude Qantas',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'INSURANCE',
+                        additionalValue: 'Overseas Travel Insurance ',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'COMPLEMENTARY_PRODUCT_DISCOUNTS',
+                        additionalValue:
+                            'Premium concierge services  Dedicated Westpac Concierge services are oncall 24/7 to fulfil your requests from restaurant bookings and party planning to tickets to your favourite game. \nComplimentary lounge passes',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'OTHER',
+                        additionalValue:
+                            'Uncapped rewards  The skys the limit with no cap on earning points. Plus earn points faster by adding one additional cardholder at no extra cost.',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'OTHER',
+                        additionalValue:
+                            'Use our SmartPlan repayment planner to break large purchases or balances down into regular instalments while keeping interestfree days.1.',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    }
+                ],
+                constraints: [
+                    {
+                        constraintType: 'MIN_LIMIT',
+                        additionalValue: 15000
+                    }
+                ],
+                eligibility: [
+                    {
+                        eligibilityType: 'MIN_AGE',
+                        additionalValue: 18,
+                        additionalInfo: '18 years old',
+                        additionalInfoURI:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/'
+                    },
+                    {
+                        eligibilityType: 'RESIDENCY_STATUS',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoURI:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/'
+                    }
+                ],
+                fees: [
+                    {
+                        name: 'Annual Card Fee',
+                        feeType: 'PERIODIC',
+                        amount: 250,
+                        transactionRate: '',
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue: 'P1Y',
+                        additionalInfo:
+                            '$250 plus a separate $50 Qantas Rewards Fee charged annually applicable only when the Altitude Qantas rewards program is selected',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    },
+                    {
+                        name: 'Foreign transaction fee',
+                        feeType: 'PURCHASE',
+                        amount: '',
+                        transactionRate: 0.03,
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue:
+                            'Payable as a percentage of the Australian dollar value of any foreign transaction.\n\nApplies for transactions in a foreign currency or in Australian dollars but processed by an overseas merchant or financial institution.',
+                        additionalInfo:
+                            'Payable as a percentage of the Australian dollar value of any foreign transaction.\n\nApplies for transactions in a foreign currency or in Australian dollars but processed by an overseas merchant or financial institution.',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    },
+                    {
+                        name: 'Cash Advance Fee',
+                        feeType: 'WITHDRAWAL',
+                        amount: 2.5,
+                        transactionRate: 0.02,
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue:
+                            'If the card has a negative balance after the transaction: 2.0 or $2.50 whichever is higher max. $150.\n\nIf the card has a positive balance after the transaction: $2.50  \n\nThese charges will appear on your statement directly below the relevant cash advance.\nApplies for transactions in a foreign currency or in Australian dollars but processed by an overseas merchant or financial institution.',
+                        additionalInfo:
+                            'If the card has a negative balance after the transaction: 2.0 or $2.50 whichever is higher max. $150.\n\nIf the card has a positive balance after the transaction: $2.50  \n\nThese charges will appear on your statement directly below the relevant cash advance.\nApplies for transactions in a foreign currency or in Australian dollars but processed by an overseas merchant or financial institution.',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    },
+                    {
+                        name: 'Duplicate statement fee',
+                        feeType: 'EVENT',
+                        amount: 2,
+                        transactionRate: '',
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue: 'Duplicate statement fee',
+                        additionalInfo:
+                            '$2.00 may be debited from your credit card account if you or an additional cardholder orders a copy of a statement that has already been issued for your account. This fee is debited from your account on or after the day you order the duplicate statement.',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    },
+                    {
+                        name: 'Late payment fee',
+                        feeType: 'EVENT',
+                        amount: 15,
+                        transactionRate: '',
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue:
+                            '$15 each statement cycle that the minimum monthly payment is not paid by the statement due date.\n\nIf the card has a positive balance after the transaction: $2.50  \n\nThese charges will appear on your statement directly below the relevant cash advance.\nApplies for transactions in a foreign currency or in Australian dollars but processed by an overseas merchant or financial institution.',
+                        additionalInfo: '',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    },
+                    {
+                        name: 'Qantas Rewards Fee',
+                        feeType: 'PERIODIC',
+                        amount: 50,
+                        transactionRate: '',
+                        accruedRate: '',
+                        accrualFrequency: '',
+                        currency: '',
+                        additionalValue: 'P1Y',
+                        additionalInfo:
+                            'Applies annually for customers who choose to earn Qantas Points through the Altitude Qantas rewards program.',
+                        additionalInfoUri:
+                            'https://www.westpac.com.au/personalbanking/creditcards/reward/altitudeblack/',
+                        discount: ''
+                    }
+                ]
+            };
+            editor.setName('Altitude Platinum Black');
+            editor.set(json);
+            editor.expandAll();
+        </script>
+        <script>
+            // Actions from sidebar
+            const btnTemplateSelection = document.getElementById(
+                'btn-template-selection'
+            );
+            const divTemplateSelection = document.querySelector(
+                '.template-list'
+            );
+            const btnTemplateSettings = document.getElementById(
+                'btn-template-settings'
+            );
+            const divTemplateSettings = document.querySelector(
+                '.template-settings'
+            );
+            const divTemplateEditor = document.querySelector(
+                '.template-editor'
+            );
+            const btnTemplateEditor = document.getElementById(
+                'btn-cc-template-edit'
+            );
+
+            btnTemplateSelection.addEventListener('click', () => {
+                divTemplateEditor.style.display = 'none';
+                divTemplateSettings.style.display = 'none';
+                divTemplateSelection.style.display = 'block';
+            });
+            btnTemplateSettings.addEventListener('click', () => {
+                divTemplateEditor.style.display = 'none';
+                divTemplateSelection.style.display = 'none';
+                divTemplateSettings.style.display = 'block';
+            });
+            btnTemplateEditor.addEventListener('click', () => {
+                divTemplateSelection.style.display = 'none';
+                divTemplateSettings.style.display = 'none';
+                divTemplateEditor.style.display = 'block';
+            });
+        </script>
+    </body>
+</html>
