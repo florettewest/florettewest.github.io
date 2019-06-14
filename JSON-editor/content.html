@@ -354,7 +354,18 @@
             var options = {
                 mode: 'tree',
                 modes: ['code', 'text', 'tree'],
-                name: 'Altitude Platinum Black'
+                name: 'Altitude Platinum Black',
+                autocomplete: {
+                    getOptions: function() {
+                        return [
+                            '[[Rates#CC|Altitude.CCAL.PurchaseRate{showAsPercentage}]]',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferRate{showCustomZero}]]	',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferTerm{none}]]',
+                            '[[Rates#CC|Altitude.CCAL.CashAdvanceRate{showAsDecimal}]]',
+                            '[[Rates#CC|Altitude.CCAL.EffectiveDate{longDateDisplay}]]'
+                        ];
+                    }
+                }
             };
             var editor = new JSONEditor(container, options);
 
