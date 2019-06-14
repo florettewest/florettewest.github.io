@@ -21,8 +21,35 @@
             </header>
 
             <!-- Main -->
-            <main class="main main-padded">
-                <div class="container-fluid">
+            <main class="main">
+                <div class="sidenav">
+                    <p>
+                        <button
+                            type="button"
+                            class="btn btn-hero btn-soft btn-block"
+                            id="btn-template-selection"
+                        >
+                            <span class="btn-text">Product selection</span>
+                            <span
+                                class="btn-icon icon icon-arrow-right"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+
+                    <p>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="btn-text">
+                                Approve Product
+                            </span>
+                            <span
+                                class="btn-icon icon icon-tick"
+                                data-grunticon-embed
+                            ></span>
+                        </button>
+                    </p>
+                </div>
+                <div class="container-fluid template-editor">
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <h2>Credit Card: Altitude Platinum Black</h2>
@@ -38,6 +65,146 @@
                                     Approve
                                 </button>
                             </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid template-list">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Product list</h2>
+                            <ul class="list-group">
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Platinum Black</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            id="btn-cc-template-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Business Gold</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Business Platinum</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude Platinum</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="list-group-item">
+                                        <span class="list-group-text"
+                                            >Altitude</span
+                                        >
+
+                                        <span class="list-group-element">
+                                            <span class="btn-group">
+                                                <label class="btn-group-item">
+                                                    <input
+                                                        class="btn-group-input"
+                                                        type="radio"
+                                                        name="options1"
+                                                    />
+                                                    <span
+                                                        class="btn-group-text btn btn-hero btn-sm"
+                                                        ><span
+                                                            class="btn-icon icon icon-edit"
+                                                            data-grunticon-embed
+                                                        ></span
+                                                    ></span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -71,7 +238,8 @@
             var container = document.getElementById('jsoneditor');
             var options = {
                 mode: 'tree',
-                modes: ['code', 'text', 'tree']
+                modes: ['code', 'text', 'tree'],
+                name: 'Altitude Platinum Black'
             };
             var editor = new JSONEditor(container, options);
 
@@ -277,13 +445,35 @@
                     }
                 ]
             };
-            editor.setName('Altitude Platinum Black');
             editor.set(json);
             editor.expandAll();
 
             // get json
             var json = editor.get();
         </script>
-        <script></script>
+        <script>
+            // Actions from sidebar
+            const btnTemplateSelection = document.getElementById(
+                'btn-template-selection'
+            );
+            const divTemplateSelection = document.querySelector(
+                '.template-list'
+            );
+            const divTemplateEditor = document.querySelector(
+                '.template-editor'
+            );
+            const btnTemplateEditor = document.getElementById(
+                'btn-cc-template-edit'
+            );
+
+            btnTemplateSelection.addEventListener('click', () => {
+                divTemplateEditor.style.display = 'none';
+                divTemplateSelection.style.display = 'block';
+            });
+            btnTemplateEditor.addEventListener('click', () => {
+                divTemplateSelection.style.display = 'none';
+                divTemplateEditor.style.display = 'block';
+            });
+        </script>
     </body>
 </html>
