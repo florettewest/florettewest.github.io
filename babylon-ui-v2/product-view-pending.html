@@ -8,7 +8,9 @@
         <link href="css/styles.css" rel="stylesheet" />
         <title>Babylon v2</title>
     </head>
-    <body class="product-body content-body content-final-body">
+    <body
+        class="product-body content-body content-final-body open-banking-body"
+    >
         <div class="side-nav-notification">
             <nav class="sidebar ng-scope">
                 <div class="sidebar-wrapper">
@@ -173,9 +175,9 @@
                             <span class="product-detail"
                                 ><strong>Brand: </strong>Westpac </span
                             ><span class="product-detail"
-                                ><strong>Portfolio: </strong> Test Portfolio </span
+                                ><strong>Portfolio: </strong>Credit Card </span
                             ><span class="product-detail"
-                                ><strong>Product: </strong>Test Product
+                                ><strong>Product: </strong>Altitude Platinum Black
                             </span>
                         </p>
                     </div>
@@ -185,6 +187,46 @@
                             <li class="tabcordion-tab js-collapsible-tab is-active">
                                 <a class="js-collapsible" href="#headerDescription">
                                     Header Description
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#features">
+                                    Features
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#eligibility">
+                                    Eligibility
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#fees">
+                                    Fees
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#depositRates">
+                                    Deposit Rates
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#lendingRates">
+                                    Lending Rates
                                     <span class="tabcordion-tab-helper" aria-hidden="true">
                                         Use the arrow keys to select a tab.
                                     </span>
@@ -218,6 +260,149 @@
                                         </a>
                                     </div>
                                     <div id="jsoneditor"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="features"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <div class="action-bar">
+                                        <a
+                                            class="btn btn-primary btn-large"
+                                            href="product-edit.html"
+                                        >
+                                            Edit Features
+                                        </a>
+                                    </div>
+                                    <div id="jsoneditor-features"></div>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="eligibility"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="fees"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="depositRates"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="lendingRates"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -267,6 +452,92 @@
             };
             editor.set(json);
             editor.expandAll();
+
+            // create the editor
+            var container2 = document.getElementById('jsoneditor-features');
+            var options2 = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree'],
+                name: 'Altitude Platinum Black',
+                navigationBar: false,
+                autocomplete: {
+                    getOptions: function() {
+                        return [
+                            '[[Rates#CC|Altitude.CCAL.effectiveFrom{showAsDate}]] // 3.2',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferRate{showCustomZero}]] // 10',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferTerm{none}]] // 5000',
+                            '[[Rates#CC|Altitude.CCAL.CashAdvanceRate{showAsDecimal}]] // 10',
+                            '[[Rates#CC|Altitude.CCAL.EffectiveDate{longDateDisplay}]] // 10-10-19'
+                        ];
+                    }
+                }
+            };
+            var editor2 = new JSONEditor(container2, options2);
+
+            // set json
+            var json2 = {
+                features: [
+                    {
+                        featureType: 'INTEREST_FREE',
+                        additionalValue: 'P45D',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'DIGITAL_BANKING',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'NOTIFICATIONS',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'LOYALTY_PROGRAM',
+                        additionalValue: 'Altitude Rewards',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'LOYALTY_PROGRAM',
+                        additionalValue: 'Altitude Qantas',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'INSURANCE',
+                        additionalValue: 'Overseas Travel Insurance ',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'COMPLEMENTARY_PRODUCT_DISCOUNTS',
+                        additionalValue:
+                            'Premium concierge services  Dedicated Westpac Concierge services are oncall 24/7 to fulfil your requests from restaurant bookings and party planning to tickets to your favourite game. \nComplimentary lounge passes',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'OTHER',
+                        additionalValue:
+                            'Uncapped rewards  The skys the limit with no cap on earning points. Plus earn points faster by adding one additional cardholder at no extra cost.',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'OTHER',
+                        additionalValue:
+                            'Use our SmartPlan repayment planner to break large purchases or balances down into regular instalments while keeping interestfree days.1.',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    }
+                ]
+            };
+            editor2.set(json2);
+            editor2.expandAll();
         </script>
     </body>
 </html>
