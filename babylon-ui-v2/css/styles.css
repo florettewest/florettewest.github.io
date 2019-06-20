@@ -67,7 +67,7 @@ body {
 .rates-body .navLinks__rates a {
   background: #9f0029;
 }
-.product-body .navLinks__product a {
+.product-landing-body .navLinks__product a {
   background: #9f0029;
 }
 .reports-body .navLinks__reports a {
@@ -81,6 +81,10 @@ body {
   color: #d5002b !important;
 }
 .pending-requests-body .navLinks__user--pending-requests a {
+  background: white !important;
+  color: #d5002b !important;
+}
+.open-banking-body .navLinks__open-banking a {
   background: white !important;
   color: #d5002b !important;
 }
