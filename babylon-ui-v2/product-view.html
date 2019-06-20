@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="css/babylon-core.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <title>Babylon v2</title>
+    </head>
+    <body class="product-body content-body content-final-body">
+        <nav class="sidebar ng-scope">
+            <div class="sidebar-wrapper">
+                <div class="logo js-logo text-center">
+                    <a class="logoImage" href="/"><img src="assets/logo_WRAPS.png"/></a>
+                </div>
+                <ul class="nav nav_ul sidebar-nav-list list-unstyled">
+                    <li class="navLinks navLinks__user">
+                        <a class="user" href="pending-approvals.html">John Smith</a>
+                        <ul
+                            class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                            id="nav-getting-started"
+                        >
+                            <li class="navLinks navLinks__user--pending-approvals">
+                                <a class="ng-binding" href="pending-approvals.html"
+                                    >My pending approvals</a
+                                >
+                            </li>
+                            <li class="navLinks navLinks__user--pending-requests">
+                                <a
+                                    class="ng-binding"
+                                    href="pending-requests.html""
+                                    >Pending requests</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__rates">
+                        <a class="ng-binding" href="rates.html">Rates, fees & dates</a>
+                        <ul
+                            class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                            id="nav-getting-started"
+                        >
+                            <li class="navLinks">
+                                <a
+                                    class="ng-binding"
+                                    href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/directEdit"
+                                    >Direct update</a
+                                >
+                            </li>
+                            <li class="navLinks">
+                                <a
+                                    class="ng-binding"
+                                    href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/bulkUpload"
+                                    >Bulk upload</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__product">
+                        <a class="ng-binding" href="product.html">Product structure</a>
+                    </li>
+                    <li class="navLinks navLinks__reports">
+                        <a
+                            class="ng-binding"
+                            href="reports.html"
+                            >Reports</a
+                        >
+                    </li>
+                    <li class="navLinks navLinks__settings">
+                        <a
+                            class="ng-binding"
+                            href="settings.html"
+                            >Settings</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav nav_ul sidebar-nav-list list-unstyled">
+              <li class="navLinks">
+                <a class="user" href="rates.html">John Smith</a>
+                <ul
+                  class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                  id="nav-getting-started"
+                >
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/approval"
+                      >My pending approvals
+                      <span class="notification-badge badge badge-primary">
+                        1
+                      </span></a
+                    >
+                  </li>
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/pendingRequests"
+                      >Pending requests</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="navLinks">
+                <a class="ng-binding" href="rates.html">Rates, fees & dates</a>
+                <ul
+                  class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                  id="nav-getting-started"
+                >
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/directEdit"
+                      >Direct update</a
+                    >
+                  </li>
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/bulkUpload"
+                      >Bulk upload</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="navLinks">
+                <a class="ng-binding" href="product.html">Product structure</a>
+              </li>
+              <li class="navLinks">
+                <a
+                  class="ng-binding"
+                  href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/welcome"
+                  >Reports</a
+                >
+              </li>
+              <li class="navLinks">
+                <a
+                  class="ng-binding"
+                  href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/welcome"
+                  >Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="main">
+            <div class="container-fluid">
+                <div class="well well-lg extraPadding">
+                    <h1>Product Structure</h1>
+                    <p>
+                        Use this section to update dynamic data into websites and other
+                        digital channels. Typically for updating rates, fees, dates and
+                        numerical values.
+                    </p>
+                    <div class="product-detail-container">
+                        <p>
+                            <span class="product-detail"
+                                ><strong>Brand: </strong>Westpac </span
+                            ><span class="product-detail"
+                                ><strong>Portfolio: </strong> Credit Card</span
+                            ><span class="product-detail"
+                                ><strong>Product: </strong>Altitude Platinum Black
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="product-tabs tabcordion tabcordion-tabs">
+                        <ul class="tabcordion-tabs tabcordion-tabs-justified">
+                            <li class="tabcordion-tab js-collapsible-tab is-active">
+                                <a class="js-collapsible" href="#headerDescription">
+                                    Header Description
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#features">
+                                    Features
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#eligibility">
+                                    Eligibility
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#fees">
+                                    Fees
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#depositRates">
+                                    Deposit Rates
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#lendingRates">
+                                    Lending Rates
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div
+                            id="headerDescription"
+                            class="collapsible-body is-open"
+                            aria-hidden="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <div class="action-bar">
+                                        <a
+                                            class="btn btn-primary btn-large"
+                                            href="product-edit.html"
+                                        >
+                                            Edit Header Description
+                                        </a>
+                                    </div>
+                                    <div id="jsoneditor"></div>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button
+                                        type="button"
+                                        class="btn btn-primary btn-large"
+                                        onclick="window.location.href='/product-view-pending.html'"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="features"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <div class="action-bar">
+                                        <a
+                                            class="btn btn-primary btn-large"
+                                            href="product-edit.html"
+                                        >
+                                            Edit Features
+                                        </a>
+                                    </div>
+                                    <div id="jsoneditor-features"></div>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="eligibility"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="fees"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="depositRates"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="lendingRates"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                                <div class="product-submit-container">
+                                    <select
+                                        id="approval"
+                                        name="approval"
+                                        class="input-field input-field-large input-width-20"
+                                    >
+                                        <option value="None">Select Approver</option>
+                                        <option value="Luke Defina">Luke Defina</option>
+                                        <option value="Kang Lee">Kang Lee</option>
+                                        <option value="Nam Phu">Nam Phu</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary btn-large">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/scripts.js"></script>
+        <script>
+            // create the editor
+            var container = document.getElementById('jsoneditor');
+            var options = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree'],
+                name: 'Altitude Platinum Black',
+                navigationBar: false,
+                autocomplete: {
+                    getOptions: function() {
+                        return [
+                            '[[Rates#CC|Altitude.CCAL.effectiveFrom{showAsDate}]] // 3.2',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferRate{showCustomZero}]] // 10',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferTerm{none}]] // 5000',
+                            '[[Rates#CC|Altitude.CCAL.CashAdvanceRate{showAsDecimal}]] // 10',
+                            '[[Rates#CC|Altitude.CCAL.EffectiveDate{longDateDisplay}]] // 10-10-19'
+                        ];
+                    }
+                }
+            };
+            var editor = new JSONEditor(container, options);
+
+            // set json
+            var json = {
+                productId: 'Altitude Platinum Black',
+                effectiveFrom: '2018-11-28T00:00:00Z',
+                effectiveTo: '2019-04-02T00:00:00Z',
+                lastUpdated: '2019-04-04T01:26:51.854523Z',
+                productCategory: 'CRED_AND_CHRG_CARDS',
+                name: 'Altitude Black Card',
+                description:
+                    'Westpac\u2019s most rewarding card offering you a choice of two great rewards programs \u2013 Altitude Rewards and Altitude Qantas with our highest points earn rate, premium travel and lifestyle services.',
+                brand: 'Westpac',
+                brandName: 'Westpac',
+                applicationUri:
+                    'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/',
+                isTailored: false
+            };
+            editor.set(json);
+            editor.expandAll();
+
+            // create the editor
+            var container2 = document.getElementById('jsoneditor-features');
+            var options2 = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree'],
+                name: 'Altitude Platinum Black',
+                navigationBar: false,
+                autocomplete: {
+                    getOptions: function() {
+                        return [
+                            '[[Rates#CC|Altitude.CCAL.effectiveFrom{showAsDate}]] // 3.2',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferRate{showCustomZero}]] // 10',
+                            '[[Rates#CC|Altitude.CCAL.BalanceTransferTerm{none}]] // 5000',
+                            '[[Rates#CC|Altitude.CCAL.CashAdvanceRate{showAsDecimal}]] // 10',
+                            '[[Rates#CC|Altitude.CCAL.EffectiveDate{longDateDisplay}]] // 10-10-19'
+                        ];
+                    }
+                }
+            };
+            var editor2 = new JSONEditor(container2, options2);
+
+            // set json
+            var json2 = {
+                features: [
+                    {
+                        featureType: 'INTEREST_FREE',
+                        additionalValue: 'P45D',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'DIGITAL_BANKING',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'NOTIFICATIONS',
+                        additionalValue: '',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'LOYALTY_PROGRAM',
+                        additionalValue: 'Altitude Rewards',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'LOYALTY_PROGRAM',
+                        additionalValue: 'Altitude Qantas',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'INSURANCE',
+                        additionalValue: 'Overseas Travel Insurance ',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'COMPLEMENTARY_PRODUCT_DISCOUNTS',
+                        additionalValue:
+                            'Premium concierge services  Dedicated Westpac Concierge services are oncall 24/7 to fulfil your requests from restaurant bookings and party planning to tickets to your favourite game. \nComplimentary lounge passes',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'OTHER',
+                        additionalValue:
+                            'Uncapped rewards  The skys the limit with no cap on earning points. Plus earn points faster by adding one additional cardholder at no extra cost.',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    },
+                    {
+                        featureType: 'OTHER',
+                        additionalValue:
+                            'Use our SmartPlan repayment planner to break large purchases or balances down into regular instalments while keeping interestfree days.1.',
+                        additionalInfo: '',
+                        additionalInfoUri: ''
+                    }
+                ]
+            };
+            editor2.set(json2);
+            editor2.expandAll();
+        </script>
+    </body>
+</html>

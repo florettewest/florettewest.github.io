@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="css/babylon-core.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <title>Babylon v2</title>
+    </head>
+    <body class="product-body">
+        <nav class="sidebar ng-scope">
+            <div class="sidebar-wrapper">
+                <div class="logo js-logo text-center">
+                    <a class="logoImage" href="/"><img src="assets/logo_WRAPS.png"/></a>
+                </div>
+                <ul class="nav nav_ul sidebar-nav-list list-unstyled">
+                    <li class="navLinks navLinks__user">
+                        <a class="user" href="pending-approvals.html">John Smith</a>
+                        <ul
+                            class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                            id="nav-getting-started"
+                        >
+                            <li class="navLinks navLinks__user--pending-approvals">
+                                <a class="ng-binding" href="pending-approvals.html"
+                                    >My pending approvals</a
+                                >
+                            </li>
+                            <li class="navLinks navLinks__user--pending-requests">
+                                <a
+                                    class="ng-binding"
+                                    href="pending-requests.html""
+                                    >Pending requests</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__rates">
+                        <a class="ng-binding" href="rates.html">Rates, fees & dates</a>
+                        <ul
+                            class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                            id="nav-getting-started"
+                        >
+                            <li class="navLinks">
+                                <a
+                                    class="ng-binding"
+                                    href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/directEdit"
+                                    >Direct update</a
+                                >
+                            </li>
+                            <li class="navLinks">
+                                <a
+                                    class="ng-binding"
+                                    href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/bulkUpload"
+                                    >Bulk upload</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__product">
+                        <a class="ng-binding" href="product.html">Product structure</a>
+                    </li>
+                    <li class="navLinks navLinks__reports">
+                        <a
+                            class="ng-binding"
+                            href="reports.html"
+                            >Reports</a
+                        >
+                    </li>
+                    <li class="navLinks navLinks__settings">
+                        <a
+                            class="ng-binding"
+                            href="settings.html"
+                            >Settings</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav nav_ul sidebar-nav-list list-unstyled">
+              <li class="navLinks">
+                <a class="user" href="rates.html">John Smith</a>
+                <ul
+                  class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                  id="nav-getting-started"
+                >
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/approval"
+                      >My pending approvals
+                      <span class="notification-badge badge badge-primary">
+                        1
+                      </span></a
+                    >
+                  </li>
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/pendingRequests"
+                      >Pending requests</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="navLinks">
+                <a class="ng-binding" href="rates.html">Rates, fees & dates</a>
+                <ul
+                  class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
+                  id="nav-getting-started"
+                >
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/directEdit"
+                      >Direct update</a
+                    >
+                  </li>
+                  <li class="navLinks">
+                    <a
+                      class="ng-binding"
+                      href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/bulkUpload"
+                      >Bulk upload</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="navLinks">
+                <a class="ng-binding" href="product.html">Product structure</a>
+              </li>
+              <li class="navLinks">
+                <a
+                  class="ng-binding"
+                  href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/welcome"
+                  >Reports</a
+                >
+              </li>
+              <li class="navLinks">
+                <a
+                  class="ng-binding"
+                  href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/welcome"
+                  >Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="main">
+            <div class="container-fluid">
+                <div class="well well-lg extraPadding ng-scope">
+                    <h1>
+                        Product structure
+                    </h1>
+                    <span class="bottom-buffer-lg text-justify fn18 ng-binding">Use this section to update dynamic data into websites and other digital channels. Typically for updating rates, fees, dates and numerical values.
+                    </span>
+                    <form class="form-horizontal ng-dirty ng-valid-parse ng-valid ng-valid-required" id="formMain" name="formMain" novalidate="">
+                        <fieldset class="fieldset w100">
+                            <h1 class="form-headline top-buffer-xl ng-binding">Brand <span class="helpIcon icon icon-size-sm icon-help"></span></h1>
+                            <div class="text-left top-buffer-xs radioGroupBrand radioGroupBrand" data-form-control-config="formData.radioGroupBrand" data-wg-input-radio-group="">
+                                <div class="row form-row">
+                                    <div class="col-sm-12">
+                                        <!-- ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input checked="checked" class="radio-input ng-valid checked ng-dirty ng-valid-parse ng-touched" id="radioGroupBrandwbc" name="radioGroupBrandRadioGroup" type="radio" value="WBC"><label class="radio-text ng-binding checked" for="radioGroupBrandwbc">Westpac</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandsgb" name="radioGroupBrandRadioGroup" type="radio" value="SGB"><label class="radio-text ng-binding" for="radioGroupBrandsgb">St.George</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandbsa" name="radioGroupBrandRadioGroup" type="radio" value="BSA"><label class="radio-text ng-binding" for="radioGroupBrandbsa">BankSA</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandbom" name="radioGroupBrandRadioGroup" type="radio" value="BOM"><label class="radio-text ng-binding" for="radioGroupBrandbom">Bank of Melbourne</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options --><input class="hidden ng-pristine ng-untouched ng-valid ng-valid-required" id="radioGroupBrand" name="radioGroupBrand" required="required"><!-- ngIf: inputModelCtrl -->
+                                        <div class="top-buffer-xs wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfig.errorMap">
+                                            <!-- ngRepeat: error in errorList -->
+                                        </div><!-- end ngIf: inputModelCtrl -->
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset ng-scope">
+                            <div class="ng-binding">
+                                <h1 class="form-headline">Portfolio and Product</h1>
+                            </div>
+                            <div class="col-sm-12 p0">
+                                <div class="col-sm-11 p0">
+                                    <div class="col-sm-12 p0 ng-isolate-scope" data-form-control-config-first="formData.selectPortfolio" data-form-control-config-second="formData.selectProduct" data-wg-input-select-group="">
+                                        <div class="p0 form-row col-sm-6 selectPortfolio">
+                                            <!-- ngIf: !hideLabel --><label class="col-sm-2 form-label p0 text-left-xs ng-binding ng-scope" for="selectPortfolio">Portfolio</label><!-- end ngIf: !hideLabel -->
+                                            <div class="col-sm-9">
+                                                <div class="input-field-select-wrapper">
+                                                    <select class="input-field-select ng-pristine ng-valid ng-valid-required ng-touched" id="selectPortfolio" name="selectPortfolio">
+                                                        <option class="ng-binding" selected value="">
+                                                            Select Portfolio
+                                                        </option>
+                                                        <option label="TEST" value="0">
+                                                            TEST
+                                                        </option>
+                                                    </select>
+                                                </div><!-- ngIf: inputModelCtrl -->
+                                                <div class="wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfigFirst.errorMap">
+                                                    <!-- ngRepeat: error in errorList -->
+                                                </div><!-- end ngIf: inputModelCtrl -->
+                                            </div><!-- ngIf: popoverValueFirst -->
+                                        </div>
+                                        <div class="table-responsive top-buffer-lg tableLayout table-bordered heightAuto">
+                                            <table class="table table-bordered">
+                                                <thead class="tableHead">
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Name</th>
+                                                        <th>Modified</th>
+                                                        <th>Modified by</th>
+                                                        <th>Published</th>
+                                                        <th>Published by</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="radio">
+                                                            <input class="radio-input" id="radio1" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>55 day platinum</td>
+                                                    <td>11/02/2019</td>
+                                                    <td>Kang Lee</td>
+                                                    <td>11/02/2019</td>
+                                                    <td>Kang Lee</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="radio">
+                                                            <input class="radio-input" id="radio2" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Low Rate Card</td>
+                                                    <td>11/02/2019</td>
+                                                    <td>Nam Phu</td>
+                                                    <td>11/02/2019</td>
+                                                    <td>Nam Phu</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset><!-- end ngIf: formMain.radioGroupBrand.$valid && formMain.radioGroupPublishDate.$valid -->
+                        <div class="fieldset">
+                            <!-- ngIf: customMessage --><!-- ngIf: isSearchInProgress -->
+                        </div>
+                        <div class="row btnButtonNav">
+                            <a href="product-view.html" class="btn btn-primary btn-lg pull-right btn-product-view">View</a>
+                            <a href="product-new.html" class="btn btn-primary btn-lg pull-right btn-product-new">Create new</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
