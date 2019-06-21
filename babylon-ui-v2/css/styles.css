@@ -35,7 +35,7 @@ body {
 }
 .navLinks__user span {
   border-top: none;
-  background: black;
+  background: #006f97;
   padding: 10px 20px !important;
   border-radius: 0;
   color: white;
@@ -45,8 +45,8 @@ body {
 }
 .user__img {
   position: absolute;
-  width: 35px;
-  top: 4px;
+  width: 32px;
+  top: 5px;
   right: 20px;
 }
 .sidebar-nav-list li a:hover {
@@ -91,7 +91,7 @@ body {
 .product-landing-body .navLinks__product a {
   background: #9f0029;
 }
-.reports-body .navLinks__reports a {
+.traceability-body .navLinks__traceability a {
   background: #9f0029;
 }
 .settings-body .navLinks__settings a {
