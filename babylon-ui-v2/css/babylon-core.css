@@ -15297,8 +15297,7 @@ input::-webkit-inner-spin-button {
     display: block;
 }
 
-.modal,
-.modal-backdrop {
+.modal {
     z-index: 9999 !important;
 }
 

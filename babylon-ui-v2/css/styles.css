@@ -116,6 +116,21 @@ body {
   align-items: flex-end;
   margin-bottom: 12px;
 }
+.modal.is-open {
+  display: table;
+}
+
+.select-brand-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.create-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+#create-modal-btn {
+  margin-left: 8px;
+}
 
 div.jsoneditor-menu {
   background: #495761;
@@ -156,6 +171,10 @@ div.jsoneditor .jsoneditor-search td {
 .content-edit-body tr[data-field='lastUpdated'] .jsoneditor-value:after {
   content: '2019-04-04T01:26:51.854523Z';
 }
+.content-final-body tr[data-field='undefined'] .jsoneditor-contextmenu,
+.content-final-body tr[data-field='undefined'] .jsoneditor-dragarea {
+  display: none;
+}
 
 .product-tabs .collapsible-body .tabcordion-body {
   padding-left: 0;
@@ -184,6 +203,9 @@ div.jsoneditor .jsoneditor-search td {
   margin-right: 18px;
 }
 
+.sidebar {
+  z-index: 1;
+}
 .sidebar-nav-list span {
   margin: 0;
 }
