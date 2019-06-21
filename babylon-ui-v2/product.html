@@ -87,7 +87,7 @@
               </h1>
               <p>Use this section to update product structure information related to Open Banking requirements such as descriptions, features, and eligibility criteria.
               </p>
-              <div class="form-horizontal ng-dirty ng-valid-parse ng-valid ng-valid-required" id="formMain" name="formMain" novalidate="">
+              <div class="form-horizontal ng-dirty ng-valid-parse ng-valid ng-valid-required" id="formMain">
                   <fieldset class="fieldset w100">
                       <h1 class="form-headline top-buffer-xl ng-binding">Brand <span class="helpIcon icon icon-size-sm icon-help"></span></h1>
                       <div class="text-left top-buffer-xs radioGroupBrand radioGroupBrand" data-form-control-config="formData.radioGroupBrand" data-wg-input-radio-group="">
@@ -118,89 +118,75 @@
                           <h1 class="form-headline">Portfolio and Product</h1>
                       </div>
                       <div class="col-sm-12 p0">
-                          <div class="col-sm-11 p0">
-                              <div class="col-sm-12 p0 ng-isolate-scope" data-form-control-config-first="formData.selectPortfolio" data-form-control-config-second="formData.selectProduct" data-wg-input-select-group="">
-                                  <div class="p0 form-row col-sm-6 selectPortfolio">
-                                      <!-- ngIf: !hideLabel --><label class="col-sm-2 form-label p0 text-left-xs ng-binding ng-scope" for="selectPortfolio">Portfolio</label><!-- end ngIf: !hideLabel -->
-                                      <div class="col-sm-9">
-                                          <div class="input-field-select-wrapper">
-                                              <select class="input-field-select ng-pristine ng-valid ng-valid-required ng-touched" id="selectPortfolio" name="selectPortfolio">
-                                                  <option class="ng-binding" selected value="">
-                                                      Select Portfolio
-                                                  </option>
-                                                  <option label="TEST" value="0">
-                                                      TEST
-                                                  </option>
-                                              </select>
-                                          </div><!-- ngIf: inputModelCtrl -->
-                                          <div class="wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfigFirst.errorMap">
-                                              <!-- ngRepeat: error in errorList -->
-                                          </div><!-- end ngIf: inputModelCtrl -->
-                                      </div><!-- ngIf: popoverValueFirst -->
-                                  </div>
-                                  <div class="table-responsive top-buffer-lg tableLayout table-bordered heightAuto">
-                                      <table id="product-table" class="table table-bordered">
-                                          <thead class="tableHead">
-                                              <tr>
-                                                  <th></th>
-                                                  <th>Name</th>
-                                                  <th>Modified</th>
-                                                  <th>Modified by</th>
-                                                  <th>Published</th>
-                                                  <th>Published by</th>
-                                                  <th>Status</th>
-                                              </tr>
-                                          </thead>
-                                      <tbody>
-                                          <tr>
-                                              <td>
-                                                  <div class="radio">
-                                                      <input class="radio-input" id="radio1" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio1"></label>
-                                                  </div>
-                                              </td>
-                                              <td>Altitude Platinum Black</td>
-                                              <td>11/02/2019</td>
-                                              <td>Kang Lee</td>
-                                              <td>11/02/2019</td>
-                                              <td>Kang Lee</td>
-                                              <td>PUBLISHED</td>
-                                          </tr>
-                                          <tr>
-                                              <td>
-                                                  <div class="radio">
-                                                      <input class="radio-input" id="radio2" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio2"></label>
-                                                  </div>
-                                              </td>
-                                              <td>Altitude Platinum</td>
-                                              <td>11/02/2019</td>
-                                              <td>Nam Phu</td>
-                                              <td>11/02/2019</td>
-                                              <td>Nam Phu</td>
-                                              <td>PUBLISHED</td>
-                                          </tr>
-                                          <tr>
-                                              <td colspan="7"><button
-                                                  id="create-modal-btn"
-                                        class="btn btn-primary js-modal"
-                                        data-modal="#create-modal"
-                                        aria-label="{BUTTON_TEXT}. Hit enter to open modal"
-                                      >
-                                        Add new product
-                                      </button></td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
+                          <div class="p0 form-row col-sm-6 selectPortfolio">
+                              <div class="input-field-select-wrapper">
+                                  <select class="input-field-select ng-pristine ng-valid ng-valid-required ng-touched" id="selectPortfolio" name="selectPortfolio">
+                                      <option class="ng-binding" selected value="">
+                                          Select Portfolio
+                                      </option>
+                                      <option label="TEST" value="0">
+                                          TEST
+                                      </option>
+                                  </select>
+                              </div><!-- ngIf: inputModelCtrl -->
+                              <div class="wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfigFirst.errorMap">
+                                  <!-- ngRepeat: error in errorList -->
+                              </div><!-- end ngIf: inputModelCtrl -->
                           </div>
+                          <div class="table-responsive top-buffer-lg tableLayout table-bordered heightAuto">
+                              <table id="product-table" class="table table-bordered">
+                                  <thead class="tableHead">
+                                      <tr>
+                                          <th width="62"></th>
+                                          <th>Name</th>
+                                          <th>Modified</th>
+                                          <th>Modified by</th>
+                                          <th>Status</th>
+                                      </tr>
+                                  </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          <div class="radio">
+                                              <input class="radio-input" id="radio1" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio1"></label>
+                                          </div>
+                                      </td>
+                                      <td>Altitude Platinum Black</td>
+                                      <td>11/02/2019</td>
+                                      <td>Kang Lee</td>
+                                      <td>PUBLISHED</td>
+                                  </tr>
+                                  <tr class="lastRow">
+                                      <td>
+                                          <div class="radio">
+                                              <input class="radio-input" id="radio2" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio2"></label>
+                                          </div>
+                                      </td>
+                                      <td>Altitude Platinum</td>
+                                      <td>11/02/2019</td>
+                                      <td>Nam Phu</td>
+                                      <td>PUBLISHED</td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="7">
+                                          <button
+                                          id="create-modal-btn"
+                                          class="btn btn-primary js-modal"
+                                          data-modal="#create-modal"
+                                          aria-label="{BUTTON_TEXT}. Hit enter to open modal"
+                                          >
+                                              Add new product
+                                          </button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
                       </div>
                   </fieldset>
                   <div class="create-btn-wrapper row btnButtonNav">
                       <a href="product-view.html" class="btn btn-primary btn-product-view">View</a>
-                      
                   </div>
-                  
               </div>
-              
           </div>
       </div>
 

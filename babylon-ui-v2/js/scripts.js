@@ -48381,22 +48381,20 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 $(document).ready(function() {
-  $("#create-product-btn").click(function() {
-    var newProduct = `<tr>
+    $('#create-product-btn').click(function() {
+        var newProduct = `<tr>
 <td>
     <div class="radio">
-        <input class="radio-input" id="radio2" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio2"></label>
+        <input class="radio-input" id="radio3" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio3"></label>
     </div>
 </td>
-<td>${$("#new-product-name").val()}</td>
+<td>${$('#new-product-name').val()}</td>
 <td>24/06/2019</td>
 <td>John Smith</td>
-<td>24/06/2019</td>
-<td>John Smith</td>
-<td>Active</td>
+<td>DRAFT</td>
 </tr>`;
-    $(".modal-backdrop").remove();
-    $(".modal").removeClass("is-open");
-    $("#product-table tbody").append(newProduct);
-  });
+        $('.modal-backdrop').remove();
+        $('.modal').removeClass('is-open');
+        $(newProduct).insertAfter('#product-table .lastRow');
+    });
 });
