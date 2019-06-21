@@ -48385,7 +48385,7 @@ $(document).ready(function() {
         var newProduct = `<tr>
 <td>
     <div class="radio">
-        <input class="radio-input" id="radio3" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio3"></label>
+        <input class="radio-input" id="radio3" name="radioGroup" type="radio" value="WBC" checked><label class="radio-text" for="radio3"></label>
     </div>
 </td>
 <td>${$('#new-product-name').val()}</td>

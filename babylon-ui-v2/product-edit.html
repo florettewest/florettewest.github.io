@@ -64,14 +64,20 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="navLinks navLinks__traceability">
-                        <a class="ng-binding" href="traceability.html">Traceability</a>
+                    <li class="navLinks navLinks__reports">
+                        <a class="ng-binding" href="reports.html">Reports</a>
                         <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
                             <li class="navLinks navLinks__open-banking">
-                                <a class="ng-binding" href="#">Websites</a>
+                                <a class="ng-binding" href="#">Websites traceability</a>
                             </li>
                             <li class="navLinks navLinks__open-banking">
-                                <a class="ng-binding" href="#">External</a>
+                                <a class="ng-binding" href="#">External traceability</a>
+                            </li>
+                            <li class="navLinks navLinks__open-banking">
+                                <a class="ng-binding" href="#">Change logs</a>
+                            </li>
+                            <li class="navLinks navLinks__open-banking">
+                                <a class="ng-binding" href="#">Portfolio members</a>
                             </li>
                         </ul>
                     </li>
@@ -401,7 +407,7 @@
                 features: [
                     {
                         featureType: 'INTEREST_FREE',
-                        additionalValue: 'P45D',
+                        'additionalValue *': 'P45D',
                         additionalInfo: '',
                         additionalInfoUri: ''
                     },
@@ -419,39 +425,39 @@
                     },
                     {
                         featureType: 'LOYALTY_PROGRAM',
-                        additionalValue: 'Altitude Rewards',
+                        'additionalValue *': 'Altitude Rewards',
                         additionalInfo: '',
                         additionalInfoUri: ''
                     },
                     {
                         featureType: 'LOYALTY_PROGRAM',
-                        additionalValue: 'Altitude Qantas',
+                        'additionalValue *': 'Altitude Qantas',
                         additionalInfo: '',
                         additionalInfoUri: ''
                     },
                     {
                         featureType: 'INSURANCE',
-                        additionalValue: 'Overseas Travel Insurance ',
+                        'additionalValue *': 'Overseas Travel Insurance ',
                         additionalInfo: '',
                         additionalInfoUri: ''
                     },
                     {
                         featureType: 'COMPLEMENTARY_PRODUCT_DISCOUNTS',
-                        additionalValue:
+                        'additionalValue *':
                             'Premium concierge services  Dedicated Westpac Concierge services are oncall 24/7 to fulfil your requests from restaurant bookings and party planning to tickets to your favourite game. \nComplimentary lounge passes',
                         additionalInfo: '',
                         additionalInfoUri: ''
                     },
                     {
                         featureType: 'OTHER',
-                        additionalValue:
+                        'additionalValue *':
                             'Uncapped rewards  The skys the limit with no cap on earning points. Plus earn points faster by adding one additional cardholder at no extra cost.',
                         additionalInfo: '',
                         additionalInfoUri: ''
                     },
                     {
                         featureType: 'OTHER',
-                        additionalValue:
+                        'additionalValue *':
                             'Use our SmartPlan repayment planner to break large purchases or balances down into regular instalments while keeping interestfree days.1.',
                         additionalInfo: '',
                         additionalInfoUri: ''
@@ -460,6 +466,144 @@
             };
             editor2.set(json2);
             editor2.expandAll();
+        </script>
+        <script>
+            var brand = `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1" selected>Westpac</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+                <option value="option-4">Option 4</option>
+            </select>`;
+
+            var isTailored = `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">True</option>
+                <option value="option-2" selected>False</option>
+            </select>`;
+
+            var productCategory = `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1" selected>CRED_AND_CHRG_CARDS</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+                <option value="option-4">Option 4</option>
+            </select>`;
+
+            var featureTypeOTHER = `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">INTEREST_FREE</option>
+                <option value="option-2">DIGITAL_BANKING</option>
+                <option value="option-3">NOTIFICATIONS</option>
+                <option value="option-4">LOYALTY_PROGRAM</option>
+                <option value="option-5">INSURANCE</option>
+                <option value="option-6">COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7" selected>OTHER</option>
+            </select>`;
+
+            $('tr[data-field="productCategory"] .jsoneditor-value').replaceWith(
+                productCategory
+            );
+            $('tr[data-field="brand"] .jsoneditor-value').replaceWith(brand);
+            $('tr[data-field="brandName"] .jsoneditor-value').replaceWith(
+                brand
+            );
+            $('tr[data-field="isTailored"] .jsoneditor-value').replaceWith(
+                isTailored
+            );
+            $(
+                'tr[data-field="featureType"]:eq(0) .jsoneditor-value'
+            ).replaceWith(
+                `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1" selected>INTEREST_FREE</option>
+                <option value="option-2">DIGITAL_BANKING</option>
+                <option value="option-3">NOTIFICATIONS</option>
+                <option value="option-4">LOYALTY_PROGRAM</option>
+                <option value="option-5">INSURANCE</option>
+                <option value="option-6">COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7">OTHER</option>
+            </select>`
+            );
+            $(
+                'tr[data-field="featureType"]:eq(1) .jsoneditor-value'
+            ).replaceWith(
+                `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">INTEREST_FREE</option>
+                <option value="option-2" selected>DIGITAL_BANKING</option>
+                <option value="option-3">NOTIFICATIONS</option>
+                <option value="option-4">LOYALTY_PROGRAM</option>
+                <option value="option-5">INSURANCE</option>
+                <option value="option-6">COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7">OTHER</option>
+            </select>`
+            );
+            $(
+                'tr[data-field="featureType"]:eq(2) .jsoneditor-value'
+            ).replaceWith(
+                `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">INTEREST_FREE</option>
+                <option value="option-2">DIGITAL_BANKING</option>
+                <option value="option-3" selected>NOTIFICATIONS</option>
+                <option value="option-4">LOYALTY_PROGRAM</option>
+                <option value="option-5">INSURANCE</option>
+                <option value="option-6">COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7">OTHER</option>
+            </select>`
+            );
+            $(
+                'tr[data-field="featureType"]:eq(3) .jsoneditor-value'
+            ).replaceWith(
+                `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">INTEREST_FREE</option>
+                <option value="option-2">DIGITAL_BANKING</option>
+                <option value="option-3">NOTIFICATIONS</option>
+                <option value="option-4" selected>LOYALTY_PROGRAM</option>
+                <option value="option-5">INSURANCE</option>
+                <option value="option-6">COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7">OTHER</option>
+            </select>`
+            );
+            $(
+                'tr[data-field="featureType"]:eq(4) .jsoneditor-value'
+            ).replaceWith(
+                `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">INTEREST_FREE</option>
+                <option value="option-2">DIGITAL_BANKING</option>
+                <option value="option-3">NOTIFICATIONS</option>
+                <option value="option-4">LOYALTY_PROGRAM</option>
+                <option value="option-5" selected>INSURANCE</option>
+                <option value="option-6">COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7">OTHER</option>
+            </select>`
+            );
+            $(
+                'tr[data-field="featureType"]:eq(5) .jsoneditor-value'
+            ).replaceWith(
+                `<select class="input-field" value="">
+                <option value="">Select</option>
+                <option value="option-1">INTEREST_FREE</option>
+                <option value="option-2">DIGITAL_BANKING</option>
+                <option value="option-3">NOTIFICATIONS</option>
+                <option value="option-4">LOYALTY_PROGRAM</option>
+                <option value="option-5">INSURANCE</option>
+                <option value="option-6" selected>COMPLEMENTARY_PRODUCT_DISCOUNTS</option>
+                <option value="option-7">OTHER</option>
+            </select>`
+            );
+            $(
+                'tr[data-field="featureType"]:eq(6) .jsoneditor-value'
+            ).replaceWith(featureTypeOTHER);
+            $(
+                'tr[data-field="featureType"]:eq(7) .jsoneditor-value'
+            ).replaceWith(featureTypeOTHER);
+            $(
+                'tr[data-field="featureType"]:eq(8) .jsoneditor-value'
+            ).replaceWith(featureTypeOTHER);
         </script>
     </body>
 </html>
