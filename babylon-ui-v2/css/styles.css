@@ -1,3 +1,11 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+}
 .main {
   min-height: 100vh;
   margin-left: 240px;
@@ -25,8 +33,21 @@ body {
   color: white;
   border-top: 1px solid #cfd8dc;
 }
-.sidebar-nav-list li:first-child a {
+.navLinks__user span {
   border-top: none;
+  background: black;
+  padding: 10px 20px !important;
+  border-radius: 0;
+  color: white;
+}
+.navLinks__user {
+  position: relative;
+}
+.user__img {
+  position: absolute;
+  width: 35px;
+  top: 4px;
+  right: 20px;
 }
 .sidebar-nav-list li a:hover {
   background: #9f0029;
@@ -96,6 +117,10 @@ body {
   margin-bottom: 12px;
 }
 
+div.jsoneditor-menu {
+  background: #495761;
+  border-bottom: 1px solid #495761;
+}
 div.jsoneditor .jsoneditor-search td {
   padding: 2px 0;
 }

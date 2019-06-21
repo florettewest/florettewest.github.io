@@ -16,7 +16,7 @@
                 </div>
                 <ul class="nav nav_ul sidebar-nav-list list-unstyled">
                     <li class="navLinks navLinks__user">
-                        <a class="user" href="pending-approvals.html">John Smith</a>
+                        <span>John Smith</span><img class="user__img" src="img/john.png" alt="John Smith">
                         <ul
                             class="nav nav_ul sidebar-nav-list list-unstyled ng-scope"
                             id="nav-getting-started"
@@ -161,18 +161,21 @@
             <div class="container-fluid">
                 <div class="well well-lg extraPadding">
                     <div class="ng-scope" data-ng-view="">
-                        <h1 class="form-headline fn22 ng-binding">
+                        <h1>
                             Welcome to Babylon
                         </h1>
-                        <span class="bottom-buffer-lg text-justify fn18 ng-binding"
-                            ><strong>Babylon</strong> is a common, self-service and
-                            multi-brand rates solution with the mission to:<br />
+                        <p class="bottom-buffer-lg text-justify fn18 ng-binding">
+                            <strong>Babylon</strong> is a common, self- service and multi-
+                            brand rates and product structure solution with the mission to:
+                            <br />
                             <i
-                                >"simplify the maintenance of rates in public channels to
-                                present the correct information to our customers
-                                efficiently."</i
-                            ></span
-                        ><!-- ngRepeat: alert in alerts -->
+                                >"simplify the maintenance of rates and other product
+                                details related to open banking requirements to ensure the
+                                correct information is displayed to our customers
+                                efficiently and transparently</i
+                            >
+                        </p>
+                        <!-- ngRepeat: alert in alerts -->
                         <form class="form-inline ng-pristine ng-valid" role="form">
                             <fieldset class="fieldset">
                                 <!-- ngIf: userData.userRole == userConfigAuthorRole -->
