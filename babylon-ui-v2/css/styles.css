@@ -181,6 +181,10 @@ div.jsoneditor .jsoneditor-search td {
   border: transparent;
   margin: 0 0 0 10px;
 }
+.input-field:read-only {
+  cursor: default;
+  color: #495761;
+}
 
 .product-tabs .collapsible-body .tabcordion-body {
   padding-left: 0;

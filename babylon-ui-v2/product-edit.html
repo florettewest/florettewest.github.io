@@ -202,7 +202,7 @@
                                     <div class="action-bar">
                                         <a
                                             class="btn btn-soft btn-primary btn-large"
-                                            href="product-view.html"
+                                            href="product-view.html#features"
                                         >
                                             Cancel edit
                                         </a>
@@ -344,8 +344,8 @@
             // create the editor
             var container = document.getElementById('jsoneditor');
             var options = {
-                mode: 'tree',
-                modes: ['code', 'text', 'tree'],
+                mode: 'form',
+                modes: ['code', 'text', 'form'],
                 name: 'Altitude Platinum Black',
                 navigationBar: false,
                 autocomplete: {
@@ -384,8 +384,8 @@
             // create the editor
             var container2 = document.getElementById('jsoneditor-features');
             var options2 = {
-                mode: 'tree',
-                modes: ['code', 'text', 'tree'],
+                mode: 'form',
+                modes: ['code', 'text', 'form'],
                 name: 'Altitude Platinum Black',
                 navigationBar: false,
                 autocomplete: {
@@ -471,9 +471,9 @@
             var brand = `<select class="input-field" value="">
                 <option value="">Select</option>
                 <option value="option-1" selected>Westpac</option>
-                <option value="option-2">Option 2</option>
-                <option value="option-3">Option 3</option>
-                <option value="option-4">Option 4</option>
+                <option value="option-2">St George</option>
+                <option value="option-3">Bank of Melbourne</option>
+                <option value="option-4">Bank SA</option>
             </select>`;
 
             var isTailored = `<select class="input-field" value="">
@@ -484,10 +484,16 @@
 
             var productCategory = `<select class="input-field" value="">
                 <option value="">Select</option>
-                <option value="option-1" selected>CRED_AND_CHRG_CARDS</option>
-                <option value="option-2">Option 2</option>
-                <option value="option-3">Option 3</option>
-                <option value="option-4">Option 4</option>
+                <option value="option-1">TRANS_AND_SAVINGS_ACCOUNTS</option>
+                <option value="option-2">TERM_DEPOSITS</option>
+                <option value="option-3">TRAVEL_CARDS</option>
+                <option value="option-4">REGULATED_TRUST_ACCOUNTS</option>
+                <option value="option-5">RESIDENTIAL_MORTGAGES</option>
+                <option value="option-6" selected>CRED_AND_CHRG_CARDS</option>
+                <option value="option-7">PERS_LOANS</option>
+                <option value="option-8">MARGIN_LOANS</option>
+                <option value="option-9">LEASES</option>
+                <option value="option-10">TRADE FINANCE</option>
             </select>`;
 
             var featureTypeOTHER = `<select class="input-field" value="">
