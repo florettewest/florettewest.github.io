@@ -109,6 +109,22 @@ body {
   background: white !important;
   color: #d5002b !important;
 }
+.portfolio-members-body .navLinks__portfolio-members a {
+  background: white !important;
+  color: #d5002b !important;
+}
+.website-traceability-body .navLinks__websites-tracedability a {
+  background: white !important;
+  color: #d5002b !important;
+}
+.external-traceability-body .navLinks__external-traceability a {
+  background: white !important;
+  color: #d5002b !important;
+}
+.change-logs-body .navLinks__change-logs a {
+  background: white !important;
+  color: #d5002b !important;
+}
 .action-bar {
   display: flex;
   flex-direction: column;
@@ -118,6 +134,9 @@ body {
 }
 .modal.is-open {
   display: table;
+}
+.tabcordion .tabcordion-tabs .tabcordion-tab a {
+  font-size: 14px;
 }
 
 .select-brand-wrapper {
@@ -184,6 +203,22 @@ div.jsoneditor .jsoneditor-search td {
 .input-field:read-only {
   cursor: default;
   color: #495761;
+}
+.icon-transfer {
+  background-image: url(../img/icon-transfer.svg);
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+div.jsoneditor td.field-controls {
+  vertical-align: middle;
+  padding: 0;
+}
+div.jsoneditor td.field-controls span {
+  margin-right: 4px;
+  display: none;
+}
+tr[data-field='undefined'] td.field-controls span {
+  display: block;
 }
 
 .product-tabs .collapsible-body .tabcordion-body {

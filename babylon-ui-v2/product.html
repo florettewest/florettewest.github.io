@@ -1,261 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="css/babylon-core.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <title>Babylon v2</title>
-  </head>
-  <body class="product-body">
-    <nav class="sidebar ng-scope">
-        <div class="sidebar-wrapper">
-            <div class="logo js-logo text-center">
-                <a class="logoImage" href="/babylon-ui-v2/"
-                    ><img src="assets/logo_WRAPS.png"
-                /></a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="css/babylon-core.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <title>Babylon v2</title>
+    </head>
+    <body class="product-body open-banking-body">
+        <nav class="sidebar ng-scope">
+            <div class="sidebar-wrapper">
+                <div class="logo js-logo text-center">
+                    <a class="logoImage" href="/babylon-ui-v2/"
+                        ><img src="assets/logo_WRAPS.png"
+                    /></a>
+                </div>
+                <ul class="nav nav_ul sidebar-nav-list list-unstyled">
+                    <li class="navLinks navLinks__user">
+                        <span>John Smith</span
+                        ><img class="user__img" src="img/john.png" alt="John Smith" />
+                        <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
+                            <li class="navLinks navLinks__user--pending-approvals">
+                                <a class="ng-binding" href="pending-approvals.html"
+                                    >My pending approvals</a
+                                >
+                            </li>
+                            <li class="navLinks navLinks__user--pending-requests">
+                                <a class="ng-binding" href="pending-requests.html"
+                                    >Pending requests</a
+                                >
+                            </li>
+                            <li class="navLinks navLinks__portfolio-members">
+                                <a class="ng-binding" href="/portfolio-members.html"
+                                    >Portfolio members</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__rates">
+                        <a class="ng-binding" href="rates.html">Rates, fees & dates</a>
+                        <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
+                            <li class="navLinks">
+                                <a
+                                    class="ng-binding"
+                                    href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/directEdit"
+                                    >Direct update</a
+                                >
+                            </li>
+                            <li class="navLinks">
+                                <a
+                                    class="ng-binding"
+                                    href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/bulkUpload"
+                                    >Bulk upload</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__product">
+                        <a class="ng-binding" href="product-landing.html"
+                            >Product structure</a
+                        >
+                        <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
+                            <li class="navLinks navLinks__open-banking">
+                                <a class="ng-binding" href="product.html"
+                                    >Open Banking</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navLinks navLinks__reports">
+                        <a class="ng-binding" href="reports.html">Reports</a>
+                        <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
+                            <li class="navLinks navLinks__websites-tracedability">
+                                <a class="ng-binding" href="website-traceability.html"
+                                    >Websites traceability</a
+                                >
+                            </li>
+                            <li class="navLinks navLinks__external-traceability">
+                                <a class="ng-binding" href="external-traceability.html"
+                                    >External traceability</a
+                                >
+                            </li>
+                            <li class="navLinks navLinks__change-logs">
+                                <a class="ng-binding" href="change-logs.html"
+                                    >Change logs</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav nav_ul sidebar-nav-list list-unstyled">
-                <li class="navLinks navLinks__user">
-                    <span>John Smith</span
-                    ><img class="user__img" src="img/john.png" alt="John Smith" />
-                    <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
-                        <li class="navLinks navLinks__user--pending-approvals">
-                            <a class="ng-binding" href="pending-approvals.html"
-                                >My pending approvals</a
-                            >
-                        </li>
-                        <li class="navLinks navLinks__user--pending-requests">
-                            <a class="ng-binding" href="pending-requests.html"
-                                >Pending requests</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li class="navLinks navLinks__rates">
-                    <a class="ng-binding" href="rates.html">Rates, fees & dates</a>
-                    <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
-                        <li class="navLinks">
-                            <a
-                                class="ng-binding"
-                                href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/directEdit"
-                                >Direct update</a
-                            >
-                        </li>
-                        <li class="navLinks">
-                            <a
-                                class="ng-binding"
-                                href="https://gsso.intranet.westpac.com.au/olfma/babylon/#/bulkUpload"
-                                >Bulk upload</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li class="navLinks navLinks__product">
-                    <a class="ng-binding" href="product-landing.html"
-                        >Product structure</a
-                    >
-                    <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
-                        <li class="navLinks navLinks__open-banking">
-                            <a class="ng-binding" href="product.html"
-                                >Open Banking</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li class="navLinks navLinks__reports">
-                    <a class="ng-binding" href="reports.html">Reports</a>
-                    <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
-                        <li class="navLinks navLinks__open-banking">
-                            <a class="ng-binding" href="#">Websites traceability</a>
-                        </li>
-                        <li class="navLinks navLinks__open-banking">
-                            <a class="ng-binding" href="#">External traceability</a>
-                        </li>
-                        <li class="navLinks navLinks__open-banking">
-                            <a class="ng-binding" href="#">Change logs</a>
-                        </li>
-                        <li class="navLinks navLinks__open-banking">
-                            <a class="ng-binding" href="#">Portfolio members</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+        </nav>
+
+        <div class="main">
+            <div class="container-fluid">
+                <div class="well well-lg extraPadding ng-scope">
+                    <h1>
+                        Open Banking
+                    </h1>
+                    <p>Use this section to update product structure information related to Open Banking requirements such as descriptions, features, and eligibility criteria.
+                    </p>
+                    <div class="form-horizontal ng-dirty ng-valid-parse ng-valid ng-valid-required" id="formMain">
+                        <fieldset class="fieldset w100">
+                            <h1 class="form-headline top-buffer-xl ng-binding">Brand <span class="helpIcon icon icon-size-sm icon-help"></span></h1>
+                            <div class="text-left top-buffer-xs radioGroupBrand radioGroupBrand" data-form-control-config="formData.radioGroupBrand" data-wg-input-radio-group="">
+                                <div class="row form-row">
+                                    <div class="col-sm-12">
+                                        <!-- ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input checked="checked" class="radio-input ng-valid checked ng-dirty ng-valid-parse ng-touched" id="radioGroupBrandwbc" name="radioGroupBrandRadioGroup" type="radio" value="WBC"><label class="radio-text ng-binding checked" for="radioGroupBrandwbc">Westpac</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandsgb" name="radioGroupBrandRadioGroup" type="radio" value="SGB"><label class="radio-text ng-binding" for="radioGroupBrandsgb">St.George</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandbsa" name="radioGroupBrandRadioGroup" type="radio" value="BSA"><label class="radio-text ng-binding" for="radioGroupBrandbsa">BankSA</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options -->
+                                        <div class="radio ng-scope">
+                                            <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandbom" name="radioGroupBrandRadioGroup" type="radio" value="BOM"><label class="radio-text ng-binding" for="radioGroupBrandbom">Bank of Melbourne</label>
+                                        </div><!-- end ngRepeat: option in formControlConfig.options --><input class="hidden ng-pristine ng-untouched ng-valid ng-valid-required" id="radioGroupBrand" name="radioGroupBrand" required="required"><!-- ngIf: inputModelCtrl -->
+                                        <div class="top-buffer-xs wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfig.errorMap">
+                                            <!-- ngRepeat: error in errorList -->
+                                        </div><!-- end ngIf: inputModelCtrl -->
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset ng-scope">
+                            <div class="ng-binding">
+                                <h1 class="form-headline">Portfolio and Product</h1>
+                            </div>
+                            <div class="col-sm-12 p0">
+                                <div class="p0 form-row col-sm-6 selectPortfolio">
+                                    <div class="input-field-select-wrapper">
+                                        <select class="input-field-select ng-pristine ng-valid ng-valid-required ng-touched" id="selectPortfolio" name="selectPortfolio">
+                                            <option value="">
+                                                Select Portfolio
+                                            </option>
+                                            <option selected label="Credit Cards" value="0">
+                                                Credit Cards
+                                            </option>
+                                            <option label="Bank Accounts" value="1">
+                                                Bank Accounts
+                                            </option>
+                                        </select>
+                                    </div><!-- ngIf: inputModelCtrl -->
+                                    <div class="wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfigFirst.errorMap">
+                                        <!-- ngRepeat: error in errorList -->
+                                    </div><!-- end ngIf: inputModelCtrl -->
+                                </div>
+                                <div class="table-responsive top-buffer-lg tableLayout table-bordered heightAuto">
+                                    <table id="product-table" class="table table-bordered">
+                                        <thead class="tableHead">
+                                            <tr>
+                                                <th width="62"></th>
+                                                <th>Name</th>
+                                                <th>Modified</th>
+                                                <th>Modified by</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="radio">
+                                                    <input class="radio-input" id="radio1" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio1"></label>
+                                                </div>
+                                            </td>
+                                            <td>Altitude Platinum Black</td>
+                                            <td>11/02/2019</td>
+                                            <td>Kang Lee</td>
+                                            <td>PUBLISHED</td>
+                                        </tr>
+                                        <tr class="lastRow">
+                                            <td>
+                                                <div class="radio">
+                                                    <input class="radio-input" id="radio2" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio2"></label>
+                                                </div>
+                                            </td>
+                                            <td>Altitude Platinum</td>
+                                            <td>11/02/2019</td>
+                                            <td>Nam Phu</td>
+                                            <td>PUBLISHED</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="7">
+                                                <button
+                                                id="create-modal-btn"
+                                                class="btn btn-primary js-modal"
+                                                data-modal="#create-modal"
+                                                aria-label="{BUTTON_TEXT}. Hit enter to open modal"
+                                                >
+                                                    Add new product
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                        <div class="create-btn-wrapper row btnButtonNav">
+                            <a href="product-view.html" class="btn btn-primary btn-product-view">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+            class="modal js-modalbody"
+            id="create-modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="{MODAL_TITLE_ID}"
+            aria-describedby="create-modal-body"
+            aria-hidden="true"
+            >
+            <div class="modal-header">
+              <button type="button" class="modal-close btn btn-link js-modalclose">
+                <span class="modal-sronly">Close modal and return to GUI page</span>
+                <span class="icon icon-close" data-grunticon-embed></span>
+              </button>
+              <span class="modal-header-title" id="{MODAL_TITLE_ID}"
+                >Create New Product</span
+              >
+            </div>
+            <div class="modal-body" id="create-modal-body">
+                <h3>Brand</h3>
+                <div class="select-brand-wrapper form-checks">
+                    <div class="form-checks-item">
+                        <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}" checked>
+                        <label for="{INPUT_ID}" class="form-checks-label">Westpac</label>
+                    </div>
+                    <div class="form-checks-item">
+                        <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}">
+                        <label for="{INPUT_ID}" class="form-checks-label">St. George</label>
+                    </div>
+                    <div class="form-checks-item">
+                        <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}">
+                        <label for="{INPUT_ID}" class="form-checks-label">BankSA</label>
+                    </div>
+                    <div class="form-checks-item">
+                        <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}">
+                        <label for="{INPUT_ID}" class="form-checks-label">Bank of Melbourne</label>
+                    </div>
+                </div>
+                <h3>Portfolio</h3>
+                <select id="{SELECT_ID}" name="{INPUT_NAME}" class="input-field [input-field-{size}]" [disabled]>
+                    <option value="{DEFAULT_VALUE}">Please select</option>
+                    <option value="{OPTION_VALUE_1}" [selected]>Test</option>
+                </select>
+                <h3>Product Name</h3>
+                <input
+                type="text"
+                class="input-field"
+                id="new-product-name"
+                aria-describedby="{HINT_ID}"
+              >
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-faint js-modalclose">
+                Close
+                <span class="modal-sronly">modal and return to GUI page</span>
+              </button>
+              <button type="button" id="create-product-btn" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
         </div>
-    </nav>
-
-    <div class="main">
-      <div class="container-fluid">
-          <div class="well well-lg extraPadding ng-scope">
-              <h1>
-                  Open Banking
-              </h1>
-              <p>Use this section to update product structure information related to Open Banking requirements such as descriptions, features, and eligibility criteria.
-              </p>
-              <div class="form-horizontal ng-dirty ng-valid-parse ng-valid ng-valid-required" id="formMain">
-                  <fieldset class="fieldset w100">
-                      <h1 class="form-headline top-buffer-xl ng-binding">Brand <span class="helpIcon icon icon-size-sm icon-help"></span></h1>
-                      <div class="text-left top-buffer-xs radioGroupBrand radioGroupBrand" data-form-control-config="formData.radioGroupBrand" data-wg-input-radio-group="">
-                          <div class="row form-row">
-                              <div class="col-sm-12">
-                                  <!-- ngRepeat: option in formControlConfig.options -->
-                                  <div class="radio ng-scope">
-                                      <input checked="checked" class="radio-input ng-valid checked ng-dirty ng-valid-parse ng-touched" id="radioGroupBrandwbc" name="radioGroupBrandRadioGroup" type="radio" value="WBC"><label class="radio-text ng-binding checked" for="radioGroupBrandwbc">Westpac</label>
-                                  </div><!-- end ngRepeat: option in formControlConfig.options -->
-                                  <div class="radio ng-scope">
-                                      <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandsgb" name="radioGroupBrandRadioGroup" type="radio" value="SGB"><label class="radio-text ng-binding" for="radioGroupBrandsgb">St.George</label>
-                                  </div><!-- end ngRepeat: option in formControlConfig.options -->
-                                  <div class="radio ng-scope">
-                                      <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandbsa" name="radioGroupBrandRadioGroup" type="radio" value="BSA"><label class="radio-text ng-binding" for="radioGroupBrandbsa">BankSA</label>
-                                  </div><!-- end ngRepeat: option in formControlConfig.options -->
-                                  <div class="radio ng-scope">
-                                      <input class="radio-input ng-pristine ng-untouched ng-valid" id="radioGroupBrandbom" name="radioGroupBrandRadioGroup" type="radio" value="BOM"><label class="radio-text ng-binding" for="radioGroupBrandbom">Bank of Melbourne</label>
-                                  </div><!-- end ngRepeat: option in formControlConfig.options --><input class="hidden ng-pristine ng-untouched ng-valid ng-valid-required" id="radioGroupBrand" name="radioGroupBrand" required="required"><!-- ngIf: inputModelCtrl -->
-                                  <div class="top-buffer-xs wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfig.errorMap">
-                                      <!-- ngRepeat: error in errorList -->
-                                  </div><!-- end ngIf: inputModelCtrl -->
-                              </div>
-                          </div>
-                      </div>
-                  </fieldset>
-                  <fieldset class="fieldset ng-scope">
-                      <div class="ng-binding">
-                          <h1 class="form-headline">Portfolio and Product</h1>
-                      </div>
-                      <div class="col-sm-12 p0">
-                          <div class="p0 form-row col-sm-6 selectPortfolio">
-                              <div class="input-field-select-wrapper">
-                                  <select class="input-field-select ng-pristine ng-valid ng-valid-required ng-touched" id="selectPortfolio" name="selectPortfolio">
-                                      <option class="ng-binding" selected value="">
-                                          Select Portfolio
-                                      </option>
-                                      <option label="TEST" value="0">
-                                          TEST
-                                      </option>
-                                  </select>
-                              </div><!-- ngIf: inputModelCtrl -->
-                              <div class="wg-input-error ng-isolate-scope ng-hide" data-error-map="formControlConfigFirst.errorMap">
-                                  <!-- ngRepeat: error in errorList -->
-                              </div><!-- end ngIf: inputModelCtrl -->
-                          </div>
-                          <div class="table-responsive top-buffer-lg tableLayout table-bordered heightAuto">
-                              <table id="product-table" class="table table-bordered">
-                                  <thead class="tableHead">
-                                      <tr>
-                                          <th width="62"></th>
-                                          <th>Name</th>
-                                          <th>Modified</th>
-                                          <th>Modified by</th>
-                                          <th>Status</th>
-                                      </tr>
-                                  </thead>
-                              <tbody>
-                                  <tr>
-                                      <td>
-                                          <div class="radio">
-                                              <input class="radio-input" id="radio1" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio1"></label>
-                                          </div>
-                                      </td>
-                                      <td>Altitude Platinum Black</td>
-                                      <td>11/02/2019</td>
-                                      <td>Kang Lee</td>
-                                      <td>PUBLISHED</td>
-                                  </tr>
-                                  <tr class="lastRow">
-                                      <td>
-                                          <div class="radio">
-                                              <input class="radio-input" id="radio2" name="radioGroup" type="radio" value="WBC"><label class="radio-text" for="radio2"></label>
-                                          </div>
-                                      </td>
-                                      <td>Altitude Platinum</td>
-                                      <td>11/02/2019</td>
-                                      <td>Nam Phu</td>
-                                      <td>PUBLISHED</td>
-                                  </tr>
-                                  <tr>
-                                      <td colspan="7">
-                                          <button
-                                          id="create-modal-btn"
-                                          class="btn btn-primary js-modal"
-                                          data-modal="#create-modal"
-                                          aria-label="{BUTTON_TEXT}. Hit enter to open modal"
-                                          >
-                                              Add new product
-                                          </button>
-                                      </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </fieldset>
-                  <div class="create-btn-wrapper row btnButtonNav">
-                      <a href="product-view.html" class="btn btn-primary btn-product-view">View</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div
-      class="modal js-modalbody"
-      id="create-modal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="{MODAL_TITLE_ID}"
-      aria-describedby="create-modal-body"
-      aria-hidden="true"
-      >
-      <div class="modal-header">
-        <button type="button" class="modal-close btn btn-link js-modalclose">
-          <span class="modal-sronly">Close modal and return to GUI page</span>
-          <span class="icon icon-close" data-grunticon-embed></span>
-        </button>
-        <span class="modal-header-title" id="{MODAL_TITLE_ID}"
-          >Create New Product</span
-        >
-      </div>
-      <div class="modal-body" id="create-modal-body">
-          <h3>Brand</h3>
-          <div class="select-brand-wrapper form-checks">
-              <div class="form-checks-item">
-                  <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}" checked>
-                  <label for="{INPUT_ID}" class="form-checks-label">Westpac</label>
-              </div>
-              <div class="form-checks-item">
-                  <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}">
-                  <label for="{INPUT_ID}" class="form-checks-label">St. George</label>
-              </div>
-              <div class="form-checks-item">
-                  <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}">
-                  <label for="{INPUT_ID}" class="form-checks-label">BankSA</label>
-              </div>
-              <div class="form-checks-item">
-                  <input type="radio" class="form-checks-input" name="brand" id="{INPUT_ID}" value="{INPUT_VALUE}">
-                  <label for="{INPUT_ID}" class="form-checks-label">Bank of Melbourne</label>
-              </div>
-          </div>
-          <h3>Portfolio</h3>
-          <select id="{SELECT_ID}" name="{INPUT_NAME}" class="input-field [input-field-{size}]" [disabled]>
-              <option value="{DEFAULT_VALUE}">Please select</option>
-              <option value="{OPTION_VALUE_1}" [selected]>Test</option>
-          </select>
-          <h3>Product Name</h3>
-          <input
-          type="text"
-          class="input-field"
-          id="new-product-name"
-          aria-describedby="{HINT_ID}"
-        >
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-faint js-modalclose">
-          Close
-          <span class="modal-sronly">modal and return to GUI page</span>
-        </button>
-        <button type="button" id="create-product-btn" class="btn btn-primary">Save changes</button>
-      </div>
-      </div>
-    </div>
-    <script src="js/scripts.js"></script>
-  </body>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

@@ -31,6 +31,11 @@
                                     >Pending requests</a
                                 >
                             </li>
+                            <li class="navLinks navLinks__portfolio-members">
+                                <a class="ng-binding" href="/portfolio-members.html"
+                                    >Portfolio members</a
+                                >
+                            </li>
                         </ul>
                     </li>
                     <li class="navLinks navLinks__rates">
@@ -67,17 +72,20 @@
                     <li class="navLinks navLinks__reports">
                         <a class="ng-binding" href="reports.html">Reports</a>
                         <ul class="nav nav_ul sidebar-nav-list list-unstyled ng-scope">
-                            <li class="navLinks navLinks__open-banking">
-                                <a class="ng-binding" href="#">Websites traceability</a>
+                            <li class="navLinks navLinks__websites-tracedability">
+                                <a class="ng-binding" href="website-traceability.html"
+                                    >Websites traceability</a
+                                >
                             </li>
-                            <li class="navLinks navLinks__open-banking">
-                                <a class="ng-binding" href="#">External traceability</a>
+                            <li class="navLinks navLinks__external-traceability">
+                                <a class="ng-binding" href="external-traceability.html"
+                                    >External traceability</a
+                                >
                             </li>
-                            <li class="navLinks navLinks__open-banking">
-                                <a class="ng-binding" href="#">Change logs</a>
-                            </li>
-                            <li class="navLinks navLinks__open-banking">
-                                <a class="ng-binding" href="#">Portfolio members</a>
+                            <li class="navLinks navLinks__change-logs">
+                                <a class="ng-binding" href="change-logs.html"
+                                    >Change logs</a
+                                >
                             </li>
                         </ul>
                     </li>
@@ -112,8 +120,32 @@
                                 </a>
                             </li>
                             <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#additionalInformation">
+                                    Additional Information
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#bundles">
+                                    Bundles
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
                                 <a class="js-collapsible" href="#features">
                                     Features
+                                    <span class="tabcordion-tab-helper" aria-hidden="true">
+                                        Use the arrow keys to select a tab.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="tabcordion-tab js-collapsible-tab">
+                                <a class="js-collapsible" href="#constraints">
+                                    Constraints
                                     <span class="tabcordion-tab-helper" aria-hidden="true">
                                         Use the arrow keys to select a tab.
                                     </span>
@@ -192,6 +224,30 @@
                             </div>
                         </div>
                         <div
+                            id="additionalInformation"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="bundles"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
                             id="features"
                             class="collapsible-body"
                             aria-hidden="true"
@@ -223,6 +279,18 @@
                                     <button type="button" class="btn btn-primary btn-large">
                                         Submit
                                     </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="constraints"
+                            class="collapsible-body"
+                            aria-hidden="true"
+                            tabindex="-1"
+                        >
+                            <div class="tabcordion-body">
+                                <div class="tabcordion-content">
+                                    <p>JSON goes here</p>
                                 </div>
                             </div>
                         </div>
@@ -610,6 +678,14 @@
             $(
                 'tr[data-field="featureType"]:eq(8) .jsoneditor-value'
             ).replaceWith(featureTypeOTHER);
+
+            console.log(
+                $('.jsoneditor-tree-inner > .jsoneditor-tree > tbody > tr')
+            );
+
+            $('.jsoneditor-tree-inner > .jsoneditor-tree > tbody > tr').prepend(
+                `<td class="field-controls"><span class="icon icon-small icon-transfer"></span></td><td class="field-controls"><span class="icon icon-small icon-add-circle"></span></td><td class="field-controls"><span class="icon icon-small icon-remove-circle"></span></td>`
+            );
         </script>
         <script>
             if (window.location.href.indexOf('#features') > -1) {
