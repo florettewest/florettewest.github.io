@@ -220,6 +220,23 @@ div.jsoneditor td.field-controls span {
 tr[data-field='undefined'] td.field-controls span {
   display: block;
 }
+div.jsoneditor-value.jsoneditor-highlight {
+  background-color: #ffffab !important;
+}
+div.jsoneditor-value.jsoneditor-highlight-active {
+  background: #ffee00 !important;
+}
+.controls-text {
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  float: left;
+  opacity: 0.8;
+  padding: 8px 0px 8px 7px;
+}
+div.jsoneditor-menu > button.jsoneditor-separator,
+div.jsoneditor-menu > div.jsoneditor-modes > button.jsoneditor-separator {
+  margin-left: 0;
+}
 
 .product-tabs .collapsible-body .tabcordion-body {
   padding-left: 0;

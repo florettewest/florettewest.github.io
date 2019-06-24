@@ -691,6 +691,19 @@
             if (window.location.href.indexOf('#features') > -1) {
                 $('a[href$="#features"]').trigger('click');
             }
+
+            var expandAll = '<span class="controls-text">Expand</span>';
+            var collapseAll = '<span class="controls-text">Collapse</span>';
+            var viewAs = '<span class="controls-text">View as:</span>';
+            $(expandAll).insertBefore(
+                '.jsoneditor-menu .jsoneditor-expand-all'
+            );
+            $(collapseAll).insertBefore(
+                '.jsoneditor-menu .jsoneditor-collapse-all'
+            );
+            $(viewAs).insertBefore(
+                '.jsoneditor-menu button[title="Switch editor mode"]'
+            );
         </script>
     </body>
 </html>
