@@ -192,7 +192,7 @@
                                     <div class="action-bar">
                                         <a
                                             class="btn btn-primary btn-large"
-                                            href="product-edit.html"
+                                            href="product-edit.html#features"
                                         >
                                             Edit Features
                                         </a>
@@ -384,7 +384,7 @@
         </script>
         <script>
             if (window.location.href.indexOf('#features') > -1) {
-                GUI.collapsible.toggle('features');
+                $('a[href$="#features"]').trigger('click');
             }
         </script>
     </body>

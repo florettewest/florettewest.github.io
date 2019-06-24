@@ -611,5 +611,10 @@
                 'tr[data-field="featureType"]:eq(8) .jsoneditor-value'
             ).replaceWith(featureTypeOTHER);
         </script>
+        <script>
+            if (window.location.href.indexOf('#features') > -1) {
+                $('a[href$="#features"]').trigger('click');
+            }
+        </script>
     </body>
 </html>
