@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- when using the mode "code", it's important to specify charset utf-8 -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+        <link
+            href="jsoneditor/dist/jsoneditor.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="jsoneditor/dist/jsoneditor.js"></script>
+    </head>
+    <body class="template js-body content-body content-final-body review-body">
+        <div class="template-wrapper">
+            <!-- Header -->
+            <header class="header header-basic header-fixed js-header">
+                <div class="header-inner">
+                    <h1>Keywords</h1>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <main class="main">
+                <div class="sidenav"></div>
+                <div class="container-fluid template-editor">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>Content Managed File: Keywords</h2>
+                            <div id="jsoneditor"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer footer-basic">
+                <div class="footer-inner">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="footer-text"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="{URL}" class="footer-logo">
+                                <span class="sr-only">Go to home</span>
+                                <span
+                                    class="logo logo-multibrand-small-right"
+                                    aria-hidden="true"
+                                    [data-grunticon-embed]
+                                ></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/gui.min.js"></script>
+        <script>
+            // create the editor
+            var container = document.getElementById('jsoneditor');
+            var options = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree']
+            };
+            var editor = new JSONEditor(container, options);
+
+            // set json
+            var json = {
+                keyword: {
+                    Enum: {
+                        ProductCategory: [
+                            {
+                                value: 'TRANS_AND_SAVINGS_ACCOUNTS',
+                                description:
+                                    'This grouping of products includes all accounts where cash is deposited in the account and is accessible to the customer when they choose. These are given many names on the market including Cash Accounts, Saving Accounts, Transaction Accounts, Current Accounts, Cheque Accounts, Passbook Accounts, etc...'
+                            },
+                            {
+                                value: 'TERM_DEPOSITS',
+                                description:
+                                    'This grouping of products includes all accounts where cash is deposited in the account for a set time period with restrictions on when funds can be withdrawn. Includes traditional Term Deposits and specialised deposits with either fixed terms or notice periods for withdrawal of funds.'
+                            },
+                            {
+                                value: 'TRAVEL_CARDS',
+                                description:
+                                    'This grouping of products includes prepaid cards with multi-currency capabilities.'
+                            },
+                            {
+                                value: 'REGULATED_TRUST_ACCOUNTS',
+                                description:
+                                    'This grouping of products includes accounts were funds are held in trust in regulated industries with complex rules embedded on how the products must operate. Industries that require this sort of product include real estate agents, solicitors and conveyancers.'
+                            },
+                            {
+                                value: 'RESIDENTIAL_MORTGAGES',
+                                description:
+                                    'This grouping of products includes all lending products that are available for the primary purpose of borrowing for the purpose of purchasing or renovating residential property, where a residential property will be used as security. This group will include both fixed, variable & secured overdraft types of product and may include both owner-occupied and investment purpose borrowing.'
+                            },
+                            {
+                                value: 'CRED_AND_CHRG_CARDS',
+                                description:
+                                    'This grouping of products includes all lending products that are issued for the purpose of allowing a flexible line of credit accessed through use of a card. These may be called various names including Credit Cards, Charge Cards and Store Cards.'
+                            },
+                            {
+                                value: 'PERS_LOANS',
+                                description:
+                                    'This grouping of products includes all lending for personal purposes that is not a residential mortgage, credit card or margin lending. These loans may be unsecured loans and term loans for purchase assets used as security such as motor vehicles. These may be called various names including Personal Loans and Car Loans.'
+                            },
+                            {
+                                value: 'MARGIN_LOANS',
+                                description:
+                                    'This grouping of products includes all types of margin loans which let you borrow money to invest in traded assets including shares & commodities or in managed funds.'
+                            },
+                            {
+                                value: 'LEASES',
+                                description:
+                                    'This grouping of products will include all types of leases including Financial Lease, Operating Lease, Sale and leaseback, etc...'
+                            },
+                            {
+                                value: 'TRADE FINANCE',
+                                description:
+                                    'This grouping of products includes specialised lending products specifically designed to facilitate domestic & international trade. This includes the issuance of letters of credit, factoring, export credit.'
+                            },
+                            {
+                                value: 'OVERDRAFTS',
+                                description:
+                                    'This grouping of products includes all types of lending which allows for the loan amount to be withdrawn, repaid, and redrawn again in any manner and any number of times, until the arrangement expires. These loans may be secured or unsecured, and generally don’t have set / minimum repayment requirements.'
+                            },
+                            {
+                                value: 'BUSINESS_LOANS',
+                                description:
+                                    'This grouping of products incorporates all types of lending for business purpose that is not a trade finance facility, lease, overdraft, residential mortgage, credit card or margin lending. It includes traditional term loans, bank guarantees and commercial bills. This category would incorporate both secured and unsecured business purpose lending including all business purpose equipment finance that is not covered by a lease.'
+                            }
+                        ],
+                        featureType: [
+                            {
+                                value: 'CARD_ACCESS',
+                                description:
+                                    'A card is available for the product to access funds',
+                                additionalValueDescription:
+                                    'Text describing list of card types that this product can be linked to'
+                            },
+                            {
+                                value: 'ADDITIONAL_CARDS',
+                                description:
+                                    'Additional cards can be requested',
+                                additionalValueDescription:
+                                    'The maximum number of additional cards. If no maximum then should be set to null'
+                            },
+                            {
+                                value: 'UNLIMITED_TXNS',
+                                description:
+                                    'Unlimited free transactions available'
+                            },
+                            {
+                                value: 'FREE_TXNS',
+                                description:
+                                    'A set number of free transactions available per month',
+                                additionalValueDescription:
+                                    'The number of free transactions'
+                            },
+                            {
+                                value: 'FREE_TXNS_ALLOWANCE',
+                                description:
+                                    'A set amount of transaction fee value that is discounted per month',
+                                additionalValueDescription:
+                                    'The amount of transaction fee discounted (in AUD)'
+                            },
+                            {
+                                value: 'LOYALTY_PROGRAM',
+                                description:
+                                    'A points based loyalty program is available',
+                                additionalValueDescription:
+                                    'Name of the loyalty program'
+                            },
+                            {
+                                value: 'OFFSET',
+                                description:
+                                    'An offset account can be connected to the product'
+                            },
+                            {
+                                value: 'OVERDRAFT',
+                                description: 'An overdraft can be applied for'
+                            },
+                            {
+                                value: 'REDRAW',
+                                description:
+                                    'Redraw of repaid principal above minimum required is available'
+                            },
+                            {
+                                value: 'INSURANCE',
+                                description:
+                                    'Insurance is provided as an additional feature of the product',
+                                additionalValueDescription:
+                                    'Text description of the type of insurance (e.g. Travel Insurance)'
+                            },
+                            {
+                                value: 'BALANCE_TRANSFERS',
+                                description:
+                                    'Balance transfers can be made to the account (eg. for credit cards)'
+                            },
+                            {
+                                value: 'INTEREST_FREE',
+                                description:
+                                    'nterest free period for purchases',
+                                additionalValueDescription:
+                                    'Interest free period. Formatted according to ISO 8601 Durations'
+                            },
+                            {
+                                value: 'INTEREST_FREE_TRANSFERS',
+                                description:
+                                    'Interest free period for balance transfers',
+                                additionalValueDescription:
+                                    'Interest free period. Formatted according to ISO 8601 Durations'
+                            },
+                            {
+                                value: 'DIGITAL_WALLET',
+                                description:
+                                    'A Digital wallet can be attached to the product',
+                                additionalValueDescription:
+                                    'The name or brand of the wallet'
+                            },
+                            {
+                                value: 'DIGITAL_BANKING',
+                                description:
+                                    'Access is available to online banking features for the product'
+                            },
+                            {
+                                value: 'NPP_PAYID',
+                                description:
+                                    'An account of this product type can be used as the target of an NPP PayID'
+                            },
+                            {
+                                value: 'NPP_ENABLED',
+                                description:
+                                    'An account of this product type can be used to receive funds as a result of a BSB/Number based NPP payment'
+                            },
+                            {
+                                value: 'DONATE_INTEREST',
+                                description:
+                                    'Indicates that interest generated from the product can be automatically donated to a charity or community group'
+                            },
+                            {
+                                value: 'BILL_PAYMENT',
+                                description:
+                                    'The product can be attached to an automatic budgeting and bill payment service',
+                                additionalValueDescription:
+                                    'Optional name of the service'
+                            },
+                            {
+                                value: 'COMPLEMENTARY_PRODUCT_DISCOUNTS',
+                                description:
+                                    'Indicates that complementary, discounted offerings (such as gift cards, or discounted travel) is available',
+                                additionalValueDescription:
+                                    'Description of the complementary offering'
+                            },
+                            {
+                                value: 'BONUS_REWARDS',
+                                description:
+                                    'Bonus loyalty rewards points are available',
+                                additionalValueDescription:
+                                    'Number of points available'
+                            },
+                            {
+                                value: 'NOTIFICATIONS',
+                                description:
+                                    'Advanced notifications are available for the product',
+                                additionalValueDescription:
+                                    'Description of the notification capability'
+                            },
+                            {
+                                value: 'OTHER',
+                                description:
+                                    'Another feature that can not be included in any of the other categories. The additionalInfo field is mandatory for this type',
+                                mandatory: ['additionalInfo']
+                            }
+                        ],
+                        constraintType: [
+                            {
+                                value: 'MIN_BALANCE',
+                                description:
+                                    'A minimum balance is required for the product',
+                                additionalValueDescription:
+                                    'The minimum balance in AmountString format'
+                            },
+                            {
+                                value: 'MAX_BALANCE',
+                                description:
+                                    'A maximum balance is required for the product',
+                                additionalValueDescription:
+                                    'The maximum balance in AmountString format'
+                            },
+                            {
+                                value: 'OPENING_BALANCE',
+                                description:
+                                    'An opening balance is required for the product',
+                                additionalValueDescription:
+                                    'The minimum opening balance in AmountString format'
+                            },
+                            {
+                                value: 'MAX_LIMIT',
+                                description: 'A maximum credit limit exists',
+                                additionalValueDescription:
+                                    'The maximum limit in AmountString format'
+                            },
+                            {
+                                value: 'MIN_LIMIT',
+                                description: 'A minimum credit limit exists',
+                                additionalValueDescription:
+                                    'The minimum limit in AmountString format'
+                            }
+                        ],
+                        eligibilityType: [
+                            {
+                                value: 'BUSINESS',
+                                description:
+                                    'Only business may apply for the account'
+                            },
+                            {
+                                value: 'PENSION_RECIPIENT',
+                                description:
+                                    'A recipient of a government pension may apply for the product'
+                            },
+                            {
+                                value: 'MIN_AGE',
+                                description:
+                                    'Only customers older than a minimum age may apply',
+                                additionalValueDescription:
+                                    'The minimum age in years'
+                            },
+                            {
+                                value: 'MAX_AGE',
+                                description:
+                                    'Only customers younger than a maximum age may apply',
+                                additionalValueDescription:
+                                    'The maximum age in years'
+                            },
+                            {
+                                value: 'MIN_INCOME',
+                                description:
+                                    'The customer must have an income greater than a specified threshold to obtain the product',
+                                additionalValueDescription:
+                                    'Minimum income in AmountString format'
+                            },
+                            {
+                                value: 'MIN_TURNOVER',
+                                description:
+                                    'Only a business with greater than a minimum turnover may apply',
+                                additionalValueDescription:
+                                    'Minimum turnover in AmountString format'
+                            },
+                            {
+                                value: 'STAFF',
+                                description:
+                                    'Only a staff member of the provider may apply'
+                            },
+                            {
+                                value: 'STUDENT',
+                                description:
+                                    'Only students may apply for the product'
+                            },
+                            {
+                                value: 'EMPLOYMENT_STATUS',
+                                description:
+                                    'An eligibility constraint based on employment status applies',
+                                additionalValueDescription:
+                                    'A description of the status required'
+                            },
+                            {
+                                value: 'RESIDENCY_STATUS',
+                                description:
+                                    'An eligibility constraint based on residency status applies',
+                                additionalValueDescription:
+                                    'A description of the status required'
+                            },
+                            {
+                                value: 'NATURAL_PERSON',
+                                description:
+                                    'The customer must be a natural person rather than another legal entity'
+                            },
+                            {
+                                value: 'OTHER',
+                                description:
+                                    'Another eligibility criteria exists as described in the additionalInfo field (if this option is specified then the additionalInfo field is mandatory)',
+                                additionalValueDescription:
+                                    'Value relevant to the criteria',
+                                mandatory: ['additionalInfo']
+                            }
+                        ],
+                        feeType: [
+                            {
+                                value: 'PERIODIC',
+                                description:
+                                    'A periodic fee such as a monthly account servicing fee',
+                                additionalValueDescription:
+                                    'The period of charge. Formatted according to ISO 8601 Durations'
+                            },
+                            {
+                                value: 'TRANSACTION',
+                                description:
+                                    'A fee associated with any transaction (incorporates WITHDRAWAL, DEPOSIT, PAYMENT and PURCHASE)'
+                            },
+                            {
+                                value: 'WITHDRAWAL',
+                                description:
+                                    'A fee associated with making a withdrawal'
+                            },
+                            {
+                                value: 'DEPOSIT',
+                                description:
+                                    'A fee associated with making a deposit'
+                            },
+                            {
+                                value: 'PAYMENT',
+                                description:
+                                    'A fee associated with making a payment'
+                            },
+                            {
+                                value: 'PURCHASE',
+                                description:
+                                    'A fee associated with making a purchase at a merchant'
+                            },
+                            {
+                                value: 'EVENT',
+                                description:
+                                    'A fee in relation to a particular event (e.g. NA ordering a new card, viewing a balance or stopping a cheque)'
+                            },
+                            {
+                                value: 'UPFRONT',
+                                description:
+                                    'A fee paid at the beginning of the product NA lifecycle, such as an establishment fee, loyalty program fee or application fee'
+                            },
+                            {
+                                value: 'EXIT',
+                                description: 'A fee for closing the product'
+                            }
+                        ],
+                        discountType: [''],
+                        discountEligibilityType: [''],
+                        unitOfMeasure: [''],
+                        rateApplicationMethod: ['']
+                    },
+                    valueType: [
+                        {
+                            value: 'String',
+                            description:
+                                'Standard UTF-8 string but unrestricted in content. Any valid Unicode character can be used.'
+                        },
+                        {
+                            value: 'ASCIIString',
+                            description:
+                                'Standard UTF-8 string but limited to the ASCII character set.'
+                        },
+                        {
+                            value: 'Boolean',
+                            description: 'Standard JSON boolean'
+                        },
+                        {
+                            value: 'Enum',
+                            description:
+                                "String representing an option from a defined list of values\n                - All possible values should be provided\n                - Values should be in all caps\n                - Spaces should be replaced with under bars '_'\n                - Values should be limited to the ASCII character set"
+                        },
+                        {
+                            value: 'NaturalNumber',
+                            description:
+                                'A natural number (ie. a positive integer inclusive of zero)'
+                        },
+                        {
+                            value: 'PositiveInteger',
+                            description: 'A positive integer (zero excluded)'
+                        },
+                        {
+                            value: 'NegativeInteger',
+                            description: 'A negative integer inclusive of zero'
+                        },
+                        {
+                            value: 'Integer',
+                            description:
+                                'Any positive or negative integer inclusive of zero'
+                        },
+                        {
+                            value: 'Number',
+                            description:
+                                'A standard floating point number. Can be positive, negative or zero'
+                        },
+                        {
+                            value: 'DateTimeString',
+                            description:
+                                'Combined Date and Time string as per RFC- 3339 (labelled date-time in the RFC)'
+                        },
+                        {
+                            value: 'DateString',
+                            description:
+                                'Date string as per RFC-3339 (labelled full-date in the RFC). UTC time should always be used'
+                        },
+                        {
+                            value: 'TimeString',
+                            description:
+                                'Time string as per RFC-3339 (labelled full-time in the RFC). UTC time should always be used'
+                        },
+                        {
+                            value: 'CurrencyString',
+                            description:
+                                'Standard 3 character currency codes as per ISO-4217'
+                        },
+                        {
+                            value: 'RateString',
+                            description:
+                                'A string representing an interest rate. A rate of 100% would be represented by the value 1.0 and a rate of -100% by -1.0\n                - A number constrained to the range [-1.0, 1.0]\n                - At least 1 and up to a total of 16 significant digits before decimal point\n                - Up to 16 digits following the decimal point\n                - No formatting, eg thousand separating commas'
+                        },
+                        {
+                            value: 'AmountString',
+                            description:
+                                'A string representing an amount of currency.\n                - A positive, zero or negative number\n                - Negative numbers identified with a ‘-‘\n                - No currency symbols should be supplied\n                - At least 1 and up to a total of 16 significant digits before decimal point\n                - Minimum 2 digits following a decimal point (more digits allowable but only if required)\n                - No additional formatting, eg thousand separating commas'
+                        },
+                        {
+                            value: 'MaskedPANString',
+                            description:
+                                'Masked credit card number. Lower case ‘x’ should be used to mask numbers and only the last four digits should be exposed to facilitate identification. This type is expected to be used for display so the format should be logical for this context'
+                        },
+                        {
+                            value: 'MaskedAccountString',
+                            description:
+                                'Masked bank account number genericised for a variety of account types. Should be represented as the full account number would normally be represented for display (including formatting) but with all digits except the last four replaced with a lowercase x. This type is expected to be used for display so the format should be logical for this context'
+                        },
+                        {
+                            value: 'URIString',
+                            description: 'A valid URI'
+                        },
+                        {
+                            value: 'ExternalRef',
+                            description:
+                                'The format is defined by an external reference such as ISO standard or an RFC'
+                        }
+                    ],
+                    brand: [
+                        'Westpac',
+                        'Bank of Melbourne',
+                        'St George',
+                        'Bank SA'
+                    ]
+                }
+            };
+            editor.set(json);
+            editor.expandAll();
+
+            // get json
+            var json = editor.get();
+        </script>
+        <script></script>
+    </body>
+</html>

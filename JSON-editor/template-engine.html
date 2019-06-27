@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- when using the mode "code", it's important to specify charset utf-8 -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+        <link
+            href="jsoneditor/dist/jsoneditor.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="jsoneditor/dist/jsoneditor.js"></script>
+    </head>
+    <body class="template js-body content-body content-final-body review-body">
+        <div class="template-wrapper">
+            <!-- Header -->
+            <header class="header header-basic header-fixed js-header">
+                <div class="header-inner">
+                    <h1>Template Engine</h1>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <main class="main">
+                <div class="sidenav"></div>
+                <div class="container-fluid template-editor">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2>
+                                Template Engine for Open Banking Authoring App
+                            </h2>
+                            <div id="jsoneditor"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer footer-basic">
+                <div class="footer-inner">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="footer-text"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="{URL}" class="footer-logo">
+                                <span class="sr-only">Go to home</span>
+                                <span
+                                    class="logo logo-multibrand-small-right"
+                                    aria-hidden="true"
+                                    [data-grunticon-embed]
+                                ></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/gui.min.js"></script>
+        <script>
+            // create the editor
+            var container = document.getElementById('jsoneditor');
+            var options = {
+                mode: 'tree',
+                modes: ['code', 'text', 'tree']
+            };
+            var editor = new JSONEditor(container, options);
+
+            // set json
+            var json = {
+                "productId": {
+                "mandatory": true,
+                "RDF Macro": false,
+                "type": "ASCIIstring",
+                "description": "A provider specific unique identifier for this product. This identifier must be unique to a product but does not otherwise need to adhere to ID permanence guidelines.",
+                "value": ""
+                },
+                "effectiveFrom": {
+                "mandatory": false,
+                "RDF Macro": true,
+                "type": "DateTimeString",
+                "description": "The date and time from which this product is effective (ie. is available for origination). Used to enable the articulation of products to the regime before they are available for customers to originate",
+                "value": ""
+                },
+                "effectiveTo": {
+                "mandatory": false,
+                "RDF Macro": true,
+                "type": "DateTimeString",
+                "description": "The date and time at which this product will be retired and will no longer be offered. Used to enable the managed deprecation of products",
+                "value": ""
+                },
+                "lastUpdated": {
+                "mandatory": true,
+                "RDF Macro": true,
+                "type": "DateTimeString",
+                "description": "The last date and time that the information for this product was changed (or the creation date for the product if it has never been altered)",
+                "value": ""
+                },
+                "productCategory": {
+                "mandatory": true,
+                "RDF Macro": false,
+                "type": "json.keyword.Enum.ProductCategory",
+                "description": "The category to which a product or account belongs.",
+                "value": ""
+                },
+                "name": {
+                "mandatory": true,
+                "RDF Macro": false,
+                "type": "String",
+                "description": "The display name of the product",
+                "value": ""
+                },
+                "description": {
+                "mandatory": true,
+                "RDF Macro": false,
+                "type": "String",
+                "description": "A description of the product",
+                "value": ""
+                },
+                "brand": {
+                "mandatory": true,
+                "RDF Macro": false,
+                "type": "json.keyword.brand",
+                "description": "A label of the brand for the product. Able to be used for filtering. For data providers with single brands this value is still required",
+                "value": ""
+                },
+                "brandName": {
+                "mandatory": "Boolean",
+                "RDF Macro": "Boolean",
+                "type": "",
+                "description": "",
+                "value": ""
+                },
+                "applicationUri": {
+                "mandatory": "Boolean",
+                "RDF Macro": "Boolean",
+                "type": "",
+                "description": "",
+                "value": ""
+                },
+                "isTailored": {
+                "mandatory": "Boolean",
+                "RDF Macro": "Boolean",
+                "type": "",
+                "description": "",
+                "value": ""
+                },
+                "additionalInformation": {
+                "overviewUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                },
+                "termsUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                },
+                "eligibilityUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                },
+                "feesAndPricingUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                },
+                "bundleUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                }
+                },
+                "bundles": [
+                {
+                    "name": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "description": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "productIds": [
+                    {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    }
+                    ]
+                }
+                ],
+                "features": [
+                {
+                    "featureType": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalValue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    }
+                }
+                ],
+                "constraints": [
+                {
+                    "constraintType": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalValue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    }
+                }
+                ],
+                "eligibility": [
+                {
+                    "eligibilityType": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalValue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    }
+                }
+                ],
+                "fees": [
+                {
+                    "name": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "feeType": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "amount": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "balanceRate": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "transactionRate": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "accruedRate": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "accrualFrequency": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "currency": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalValue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "discounts": [
+                    {
+                        "description": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "discountType": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "amount": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "balanceRate": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "transactionRate": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "accruedRate": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "feeRate": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "additionalValue": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "additionalInfo": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "additionalInfoUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "eligibility": [
+                        {
+                            "discountEligibilityType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            },
+                            "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            },
+                            "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            },
+                            "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            }
+                        }
+                        ]
+                    }
+                    ]
+                }
+                ],
+                "depositRates": [
+                {
+                    "depositRateType": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "rate": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "calculationFrequency": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "applicationFrequency": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "tiers": [
+                    {
+                        "name": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "unitOfMeasure": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "minimumValue": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "maximumValue": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "rateApplicationMethod": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "applicabilityConditions": {
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        },
+                        "subTier": {
+                        "name": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "unitOfMeasure": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "minimumValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "maximumValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "rateApplicationMethod": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "applicabilityConditions": {
+                            "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            },
+                            "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            }
+                        }
+                        }
+                    }
+                    ],
+                    "additionalValue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    }
+                }
+                ],
+                "lendingRates": [
+                {
+                    "lendingRateType": {
+                    "productId": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "effectiveFrom": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "effectiveTo": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "lastUpdated": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "productCategory": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "name": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "brand": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "brandName": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "applicationUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "isTailored": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                    },
+                    "additionalInformation": {
+                        "overviewUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "termsUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "eligibilityUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "feesAndPricingUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "bundleUri": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        }
+                    },
+                    "bundles": [
+                        {
+                        "name": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "description": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "productIds": [
+                            {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            }
+                        ]
+                        }
+                    ],
+                    "features": [
+                        {
+                        "featureType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        }
+                    ],
+                    "constraints": [
+                        {
+                        "constraintType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        }
+                    ],
+                    "eligibility": [
+                        {
+                        "eligibilityType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        }
+                    ],
+                    "fees": [
+                        {
+                        "name": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "feeType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "amount": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "balanceRate": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "transactionRate": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "accruedRate": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "accrualFrequency": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "currency": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "discounts": [
+                            {
+                            "description": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "discountType": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "amount": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "balanceRate": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "transactionRate": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "accruedRate": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "feeRate": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "additionalValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "additionalInfo": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "additionalInfoUri": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "eligibility": [
+                                {
+                                "discountEligibilityType": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                },
+                                "additionalValue": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                },
+                                "additionalInfo": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                },
+                                "additionalInfoUri": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                }
+                                }
+                            ]
+                            }
+                        ]
+                        }
+                    ],
+                    "depositRates": [
+                        {
+                        "depositRateType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "rate": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "calculationFrequency": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "applicationFrequency": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "tiers": [
+                            {
+                            "name": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "unitOfMeasure": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "minimumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "maximumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "rateApplicationMethod": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "applicabilityConditions": {
+                                "additionalInfo": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "additionalInfoUri": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                }
+                            },
+                            "subTier": {
+                                "name": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "unitOfMeasure": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "minimumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "maximumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "rateApplicationMethod": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "applicabilityConditions": {
+                                "additionalInfo": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                },
+                                "additionalInfoUri": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                }
+                                }
+                            }
+                            }
+                        ],
+                        "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        }
+                    ],
+                    "lendingRates": [
+                        {
+                        "lendingRateType": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "rate": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "comparisonRate": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "calculationFrequency": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "applicationFrequency": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "interestPaymentDue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "tiers": [
+                            {
+                            "name": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "unitOfMeasure": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "minimumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "maximumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "rateApplicationMethod": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                            },
+                            "applicabilityConditions": {
+                                "additionalInfo": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "additionalInfoUri": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                }
+                            },
+                            "subTier": {
+                                "name": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "unitOfMeasure": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "minimumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "maximumValue": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "rateApplicationMethod": {
+                                "mandatory": "Boolean",
+                                "RDF Macro": "Boolean",
+                                "type": "",
+                                "description": "",
+                                "value": ""
+                                },
+                                "applicabilityConditions": {
+                                "additionalInfo": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                },
+                                "additionalInfoUri": {
+                                    "mandatory": "Boolean",
+                                    "RDF Macro": "Boolean",
+                                    "type": "",
+                                    "description": "",
+                                    "value": ""
+                                }
+                                }
+                            }
+                            }
+                        ],
+                        "additionalValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        }
+                    ]
+                    },
+                    "rate": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "comparisonRate": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "calculationFrequency": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "applicationFrequency": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "interestPaymentDue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "tiers": [
+                    {
+                        "name": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "unitOfMeasure": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "minimumValue": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "maximumValue": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "rateApplicationMethod": {
+                        "mandatory": "Boolean",
+                        "RDF Macro": "Boolean",
+                        "type": "",
+                        "description": "",
+                        "value": ""
+                        },
+                        "applicabilityConditions": {
+                        "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        }
+                        },
+                        "subTier": {
+                        "name": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "unitOfMeasure": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "minimumValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "maximumValue": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "rateApplicationMethod": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                        },
+                        "applicabilityConditions": {
+                            "additionalInfo": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            },
+                            "additionalInfoUri": {
+                            "mandatory": "Boolean",
+                            "RDF Macro": "Boolean",
+                            "type": "",
+                            "description": "",
+                            "value": ""
+                            }
+                        }
+                        }
+                    }
+                    ],
+                    "additionalValue": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfo": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    },
+                    "additionalInfoUri": {
+                    "mandatory": "Boolean",
+                    "RDF Macro": "Boolean",
+                    "type": "",
+                    "description": "",
+                    "value": ""
+                    }
+                }
+                ]
+            };
+            editor.set(json);
+            editor.expandAll();
+
+            // get json
+            var json = editor.get();
+        </script>
+        <script></script>
+    </body>
+</html>
